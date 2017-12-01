@@ -311,3 +311,9 @@ vertical-align: middle;
     padding-right: 80px;
     padding-bottom: 50px;
 }
+
+.injected {
+    visibility: hidden;
+    height: 0px;
+    margin-top: -500px;
+}
