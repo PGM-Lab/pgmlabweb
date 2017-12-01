@@ -1,0 +1,313 @@
+﻿
+
+#areas-of-expertise {
+    background-color: lightgray;
+    padding-top: 30px; 
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+#areas-of-expertise h1{
+    text-align: left;
+}
+
+
+.areas-block{
+	width: 40%;
+    padding-top: 20px; 
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+	 display: inline-block; 
+	text-align: left
+}
+
+#areas-of-expertise .figure{
+    width: 150px;
+    padding-bottom: 20px
+}
+
+
+
+/***************/
+
+#facts-and-figures {
+    padding-top: 30px; 
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+        color: white;
+/*    height: 600px  */
+
+    /* The image used */
+    background-image: url("../img/bg.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#facts-and-figures h1{
+    text-align: left;
+}
+
+
+.facts-block{
+	width: 30%;
+    padding-top: 60px; 
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+     display: inline-block; 
+    text-align: center
+}
+
+.facts-num{
+    text-align: center;
+    font-size: 250%;
+    font-weight: bold;
+}
+
+.facts-text{
+    text-align: center;
+    font-size: 70%;
+    font-weight: normal;
+    
+}
+
+
+
+/**********/
+
+#software {
+    background-color: white
+    padding-top: 20px; 
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+    
+}
+
+#software h1{
+    text-align: left;
+}
+
+
+.software-block{
+	width: 20%;
+    padding-top: 30px; 
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+	 display: inline-block; 
+	text-align: left;
+    margin-left: 30px;
+}
+
+#software .figure{
+    width: 90px;
+    padding-bottom: 20px
+}
+
+
+
+/***************/
+
+#consulting {
+    background-color: black;
+    padding-top: 20px; 
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    color: white;
+    text-align: center;
+    
+}
+
+#consulting h1{
+    text-align: left;
+}
+
+
+.consulting-block{
+	width: 45%;
+    padding-top: 100px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 100px;
+	 display: inline-block; 
+	text-align: left;
+    margin-left: 00px;
+    
+}
+
+.consulting-image{
+	width: 120px;
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    	 display: inline-block; 
+vertical-align: middle;
+	text-align: left;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.consulting-text{
+	width: 50%;
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+	 display: inline-block; 
+    vertical-align: middle;
+
+
+	text-align: left;
+    margin-left: 30px;
+}
+
+
+
+/***************/
+
+
+
+
+#success-stories {
+    background-color: lightgray;
+    padding-top: 30px; 
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    text-align: right;
+    align-content: center;
+}
+
+#success-stories h1{
+    text-align: left;
+}
+
+
+
+.success-block{
+	width: 100%;
+    padding-top: 20px; 
+    padding-left: 120px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+	text-align: left;
+    margin-left: 00px;
+    
+}
+
+.success-image{
+	width: 150px;
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    	 display: inline-block; 
+vertical-align: middle;
+	text-align: left;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.success-text{
+	width: 70%;
+    padding-top: 0px; 
+    padding-left: 20px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+	 display: inline-block; 
+    vertical-align: middle;
+
+
+	text-align: left;
+}
+
+/**********/
+
+
+#partners {
+    background-color: white
+    padding-top: 20px; 
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+    
+}
+
+#partners h1{
+    text-align: left;
+}
+
+
+.partners-block{
+	width: 15%;
+    padding-top: 30px; 
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+	 display: inline-block; 
+	text-align: left;
+}
+
+
+/**********/
+
+
+#contact {
+    background-color: rgb(76, 76, 76); 
+    padding-top: 20px; 
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: white; 
+    
+}
+
+#contact h1{
+    text-align: left;
+}
+
+
+
+
+/*******/
+
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td,
+.table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 0px solid #dfd7ca
+}
+
+.figure{
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.generic-container {
+    padding-top: 30px; 
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+}
