@@ -4,7 +4,7 @@ import sys, os
 #sys.path.insert(0, os.path.abspath('../../'))
 import sphinx_bootstrap_theme
 
-from custom_directives import IncludeDirective, GalleryItemDirective, CustomGalleryItemDirective
+
 
 
 # If extensions (or modules to document with autodoc) are in another directory,
