@@ -22,7 +22,10 @@ Areas of Expertise
       :align: center
       :target: ./areas-of-expertise/topic1.html
 
-   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. `(Read more)`_
+   
+   .. _(Read more): ./areas-of-expertise/topic1.html
+   
 
 .. container:: areas-block
 
