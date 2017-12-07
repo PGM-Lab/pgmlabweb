@@ -1,13 +1,28 @@
 ﻿
 
+
+
+
 #areas-of-expertise {
     background-color: lightgray;
-    padding-top: 30px; 
+    padding-top: 0px; 
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 50px;
     text-align: center;
 }
+
+#areas-of-expertise:before{
+    display: inline-block;
+    width: 120%;
+    height: 16px;
+        margin-left: -80px;
+    content: "";
+    background: url(../img/areas-border-top.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+
 
 #areas-of-expertise h1{
     text-align: left;
@@ -193,6 +208,19 @@ vertical-align: middle;
     text-align: right;
     align-content: center;
 }
+
+
+
+#success-stories:before{
+    display: inline-block;
+    width: 120%;
+    height: 16px;
+        margin-left: -80px;
+    content: "";
+    background: url(../img/success-border-top.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
 
 #success-stories h1{
     text-align: left;
