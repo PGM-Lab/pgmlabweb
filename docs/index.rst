@@ -1,16 +1,14 @@
 
 |
 
+.. image:: _static/img/title.png
+   :scale: 90 %
+   :align: center
 
-.. image:: _static/img/header.png
-   	:scale: 80 %
-   	:align: center
+|
 
 |
 
-
-
-|
 
 Areas of Expertise 
 =====================================

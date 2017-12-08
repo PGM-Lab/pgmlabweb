@@ -9,6 +9,9 @@ sr.reveal('.consulting-block', { duration: 500 });
 sr.reveal('.success-block', { duration: 500 });
 sr.reveal('.partners-block', { duration: 500 });
 
+//sr.reveal('h1', { duration: 500 });
+
+
 
 
 
