@@ -1,9 +1,10 @@
 ﻿
 
 
+/***************/
 
 
-#areas-of-expertise {
+#research {
     background-color: lightgray;
     padding-top: 0px; 
     padding-left: 80px;
@@ -12,7 +13,7 @@
     text-align: center;
 }
 
-#areas-of-expertise:before{
+#research:before{
     display: inline-block;
     width: 120%;
     height: 16px;
@@ -24,26 +25,65 @@
 
 
 
-#areas-of-expertise h1{
+#research h1{
     text-align: left;
 }
 
 
-.areas-block{
+.research-block{
 	width: 40%;
     padding-top: 20px; 
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 20px;
 	 display: inline-block; 
-	text-align: left
+	text-align: center
 }
 
-#areas-of-expertise .figure{
+#research .figure{
     width: 150px;
     padding-bottom: 20px
 }
 
+
+/***************/
+
+#education {
+    background-color: white;
+    padding-top: 0px; 
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+#education:before{
+    display: inline-block;
+    width: 120%;
+    height: 16px;
+        margin-left: -80px;
+    content: "";
+    background: url(../img/areas-border-top.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+#education h1{
+    text-align: left;
+}
+
+
+.education-image{
+	width: 200px;
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    	 display: inline-block; 
+vertical-align: middle;
+	text-align: left;
+    margin-left: 0px;
+    margin-top: 0px;
+}
 
 
 /***************/
@@ -240,7 +280,7 @@ vertical-align: middle;
 }
 
 .success-image{
-	width: 150px;
+	width: 250px;
     padding-top: 0px; 
     padding-left: 0px;
     padding-right: 0px;

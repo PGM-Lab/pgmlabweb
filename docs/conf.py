@@ -111,7 +111,8 @@ html_theme_options = {
     # Note the "1" or "True" value above as the third argument to indicate
     # an arbitrary url.
      'navbar_links': [
-         ("Areas of Expertise", "./index.html#areas-of-expertise", 1),
+         ("Research", "./index.html#research", 1),
+         ("Education", "./index.html#education", 1),
          ("Facts and Figures", "./index.html#facts-and-figures", 1),
          ("Software", "./index.html#software", 1),
          ("Consulting", "./index.html#consulting", 1), 
