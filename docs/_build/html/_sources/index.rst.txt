@@ -1,13 +1,11 @@
+PGM Lab
+===========================
 
-|
+.. container:: header-title
 
-.. image:: _static/img/title.png
-   :scale: 90 %
-   :align: center
+    .. figure:: _static/img/header-title.png
+       :align: left
 
-|
-
-|
 
 
 Areas of Expertise 

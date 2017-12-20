@@ -1,10 +1,69 @@
-﻿
+﻿html * 
+{
+    font-family: Raleway;
+    
+}
 
+
+#pgm-lab {
+    padding-top: 20px; 
+    padding-left: 100px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+        background-image: url("../img/header-bg3.png");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    //background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    //clear: left;
+}
+
+
+
+
+#pgm-lab h1{
+    visibility: hidden;
+ }
+
+.header-title{   
+
+    width: 60%; 
+  //  padding-top: -40px;
+
+
+
+}
+
+.header-title2{   
+    text-align: left;
+    font-size: 800%;
+    color: #A6A6A6;
+   display:table;
+        float: left;
+
+
+
+
+}
+
+.header-subtitle{
+    display: block;
+
+    font-size: 200%;
+        color: #A6A6A6;
+
+}
 
 
 
 #areas-of-expertise {
-    background-color: lightgray;
+    background-color: #B6E6B4;
     padding-top: 0px; 
     padding-left: 80px;
     padding-right: 80px;
@@ -19,6 +78,9 @@
         margin-left: -80px;
     content: "";
     background: url(../img/areas-border-top.png) no-repeat 0 0;
+        background-color: #B9D3E2;
+
+
     background-size: 100% 100%;
 }
 
@@ -58,7 +120,7 @@
 /*    height: 600px  */
 
     /* The image used */
-    background-image: url("../img/bg.jpg");
+    background-image: url("../img/facts-bg.jpg");
 
     /* Set a specific height */
     min-height: 500px; 
@@ -138,7 +200,7 @@
 /***************/
 
 #consulting {
-    background-color: black;
+    background-color: #303E30;
     padding-top: 20px; 
     padding-left: 80px;
     padding-right: 80px;
@@ -200,7 +262,7 @@ vertical-align: middle;
 
 
 #success-stories {
-    background-color: lightgray;
+    background-color: #B6E6B4;
     padding-top: 30px; 
     padding-left: 80px;
     padding-right: 80px;
