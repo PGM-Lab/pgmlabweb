@@ -6,15 +6,15 @@
 
 
 #pgm-lab {
-    padding-top: 20px; 
-    padding-left: 100px;
-    padding-right: 80px;
-    padding-bottom: 50px;
+    padding-top: 30px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
     text-align: center;
-        background-image: url("../img/header-bg3.png");
+        background-image: url("../img/header-bg.png");
 
     /* Set a specific height */
-    min-height: 500px; 
+    min-height: 460px; 
 
     /* Create the parallax scrolling effect */
     //background-attachment: fixed;
@@ -34,7 +34,10 @@
 .header-title{   
 
     width: 60%; 
-  //  padding-top: -40px;
+   padding-left: 5%;
+        min-width: 450px;
+
+
 
 
 
@@ -60,10 +63,10 @@
 
 }
 
+/*********/
 
-
-#areas-of-expertise {
-    background-color: #B6E6B4;
+#research {
+    background-color: #d4dee9;
     padding-top: 0px; 
     padding-left: 80px;
     padding-right: 80px;
@@ -71,9 +74,9 @@
     text-align: center;
 }
 
-#areas-of-expertise:before{
+#research:before{
     display: inline-block;
-    width: 120%;
+    width: 100vw;
     height: 16px;
         margin-left: -80px;
     content: "";
@@ -86,24 +89,109 @@
 
 
 
-#areas-of-expertise h1{
+#research h1{
     text-align: left;
 }
 
 
-.areas-block{
-	width: 40%;
+.research-block{
+	width: 450px;
     padding-top: 20px; 
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 20px;
 	 display: inline-block; 
-	text-align: left
+	text-align: left;
 }
 
-#areas-of-expertise .figure{
-    width: 150px;
-    padding-bottom: 20px
+
+
+
+.research-image{
+	
+  width: 50%;
+  margin: 0 auto;
+  display: table; 
+
+  
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+}
+
+.research-text{
+	width: 100%;
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+	 display: inline-block; 
+    vertical-align: middle;
+
+
+	text-align: left;
+    margin-left: 0px;
+}
+
+
+
+
+/***************/
+
+#education {
+    background-color: #484F5F;
+    padding-top: 20px; 
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 130px;
+    color: white;
+    text-align: center;
+    
+}
+
+#education h1{
+    text-align: left;
+    padding-bottom: 40px;
+}
+
+
+.education-block{
+	width: 450px;
+    padding-top: 50px; 
+    padding-left: 0px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+	 display: inline-block; 
+
+    
+}
+
+.education-image{
+	width: 20%;
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    	 display: inline-block; 
+vertical-align: middle;
+	text-align: left;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.education-text{
+	width: 70%;
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+	 display: inline-block; 
+    vertical-align: middle;
+
+
+	text-align: left;
+    margin-left: 5%;
 }
 
 
@@ -180,31 +268,56 @@
 
 
 .software-block{
-	width: 20%;
-    padding-top: 30px; 
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
+	width: 350px;
+    padding-top: 20px; 
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 20px;
 	 display: inline-block; 
-	text-align: left;
-    margin-left: 30px;
+	text-align: left
 }
 
-#software .figure{
-    width: 90px;
-    padding-bottom: 20px
+
+
+
+.software-image{
+	
+  width: 50%;
+  margin: 0 auto;
+  display: table; 
+
+  
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 10px;
 }
+
+.software-text{
+	width: 100%;
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+	 display: inline-block; 
+    vertical-align: middle;
+
+
+	text-align: left;
+    margin-left: 0px;
+}
+
 
 
 
 /***************/
 
 #consulting {
-    background-color: #303E30;
+    background-color: #484F5F;
     padding-top: 20px; 
     padding-left: 80px;
     padding-right: 80px;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
     color: white;
     text-align: center;
     
@@ -212,23 +325,24 @@
 
 #consulting h1{
     text-align: left;
+        padding-bottom: 40px;
+
+
 }
 
-
 .consulting-block{
-	width: 45%;
-    padding-top: 100px; 
+	width: 450px;
+    padding-top: 50px; 
     padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 100px;
+    padding-right: 40px;
+    padding-bottom: 10px;
 	 display: inline-block; 
-	text-align: left;
-    margin-left: 00px;
+
     
 }
 
 .consulting-image{
-	width: 120px;
+	width: 20%;
     padding-top: 0px; 
     padding-left: 0px;
     padding-right: 0px;
@@ -241,7 +355,7 @@ vertical-align: middle;
 }
 
 .consulting-text{
-	width: 50%;
+	width: 70%;
     padding-top: 0px; 
     padding-left: 0px;
     padding-right: 0px;
@@ -251,7 +365,7 @@ vertical-align: middle;
 
 
 	text-align: left;
-    margin-left: 30px;
+    margin-left: 5%;
 }
 
 
@@ -262,7 +376,7 @@ vertical-align: middle;
 
 
 #success-stories {
-    background-color: #B6E6B4;
+    background-color: #9AB2CC;
     padding-top: 30px; 
     padding-left: 80px;
     padding-right: 80px;
@@ -273,16 +387,6 @@ vertical-align: middle;
 
 
 
-#success-stories:before{
-    display: inline-block;
-    width: 120%;
-    height: 16px;
-        margin-left: -80px;
-    content: "";
-    background: url(../img/success-border-top.png) no-repeat 0 0;
-    background-size: 100% 100%;
-}
-
 
 #success-stories h1{
     text-align: left;
@@ -292,32 +396,30 @@ vertical-align: middle;
 
 .success-block{
 	width: 100%;
-    padding-top: 20px; 
-    padding-left: 120px;
-    padding-right: 0px;
+    padding-top: 50px; 
+    padding-left: 0px;
+    padding-right: 40px;
     padding-bottom: 10px;
-	text-align: left;
-    margin-left: 00px;
+	 display: inline-block; 
+
     
 }
 
 .success-image{
-	width: 150px;
+	width: 30%;
     padding-top: 0px; 
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
+      margin: 0 auto;
     	 display: inline-block; 
-vertical-align: middle;
-	text-align: left;
-    margin-left: 0px;
-    margin-top: 0px;
+
 }
 
 .success-text{
-	width: 70%;
+	width: 60%;
     padding-top: 0px; 
-    padding-left: 20px;
+    padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
 	 display: inline-block; 
@@ -325,7 +427,11 @@ vertical-align: middle;
 
 
 	text-align: left;
+    margin-left: 5%;
 }
+
+
+
 
 /**********/
 
@@ -346,7 +452,7 @@ vertical-align: middle;
 
 
 .partners-block{
-	width: 15%;
+	width: 200px;
     padding-top: 30px; 
     padding-left: 30px;
     padding-right: 30px;
