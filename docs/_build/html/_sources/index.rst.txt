@@ -12,57 +12,56 @@ PGM Lab
 Research 
 =====================================
 
+.. container:: content-block
 
-.. container:: research-block
+   .. container:: research-block
 
-   .. container:: research-image
+      .. container:: research-image
 
-      .. figure:: _static/imgs/pgm.png
-         :align: center
-         :target: ./areas-of-expertise/topic1.html
+         .. figure:: _static/imgs/pgm.png
+            :align: center
+            :target: ./areas-of-expertise/topic1.html
 	    
-   .. container:: research-text  
+      .. container:: research-text  
    
-      **Probabilistic Graphical Models** are open-box models which can be easily interpreted by humans. Our research focus on expanding the scope 
-      and the possibilities of this models by developing new inference and learning algorithms, and how to enhance their applicability to real world problems.
+         **Probabilistic Graphical Models** are open-box models which can be easily interpreted by humans. Our research focus on expanding the scope and the possibilities of this models by developing new inference and learning algorithms, and how to enhance their applicability to real world problems.
 
 
-.. container:: research-block
+   .. container:: research-block
 
-   .. container:: research-image
+      .. container:: research-image
 
-      .. figure:: _static/imgs/pml.png
-         :align: center
+         .. figure:: _static/imgs/pml.png
+            :align: center
 	    
-   .. container:: research-text  
+      .. container:: research-text  
    
-      **Probabilistic Machine Learning** is a branch of machine learning based on (Bayesian) probability theory. Our research focus on developing new 
-      methods to make these methods scalable to deal with massive data sets and data streams as well as applications to real world problems.    
+         **Probabilistic Machine Learning** is a branch of machine learning based on (Bayesian) probability theory. Our research focus on developing new methods to make these methods scalable to deal with massive data sets and data streams as well as applications to real world problems.    
       
+.. container:: content-block
 
-.. container:: research-block
+   .. container:: research-block
 
-   .. container:: research-image
+      .. container:: research-image
    
-      .. figure:: _static/imgs/datascience.png
-         :align: center
+         .. figure:: _static/imgs/datascience.png
+            :align: center
          
-   .. container:: research-text
+      .. container:: research-text
       
-      **Data Science** is an interdisciplinary field about scientific methods, processes, and systems to extract knowledge or insights from data. Our research  focus on novel methods to improve the scalability and the capacity of the current approaches.
+         **Data Science** is an interdisciplinary field about scientific methods, processes, and systems to extract knowledge or insights from data. Our research  focus on novel methods to improve the scalability and the capacity of the current approaches.
 
 
-.. container:: research-block
+   .. container:: research-block
 
-   .. container:: research-image
+      .. container:: research-image
    
-      .. figure:: _static/imgs/ai.png
-         :align: center
+         .. figure:: _static/imgs/ai.png
+            :align: center
          
-   .. container:: research-text
+      .. container:: research-text
 
-      **Intelligent Systems** are systems with the capacity of learning and reasoning. Our research also focus on developing intelligent systems for problems coming
-      from biology, genetics, information retrieval, crime prediction, drug discovery, autonomous driving, etc.
+         **Intelligent Systems** are systems with the capacity of learning and reasoning. Our research also focus on developing intelligent systems for problems coming from biology, genetics, information retrieval, crime prediction, drug discovery, autonomous driving, etc.
 
 
 

@@ -68,7 +68,7 @@
 #research {
     background-color: #d4dee9;
     padding-top: 0px; 
-    padding-left: 80px;
+    padding-left: 0px;
     padding-right: 80px;
     padding-bottom: 50px;
     text-align: center;
@@ -78,7 +78,6 @@
     display: inline-block;
     width: 100vw;
     height: 16px;
-        margin-left: -80px;
     content: "";
     background: url(../img/areas-border-top.png) no-repeat 0 0;
         background-color: #B9D3E2;
@@ -91,15 +90,21 @@
 
 #research h1{
     text-align: left;
+    margin-left:5vw;
 }
 
 
+.content-block{
+   width:  100vw 
+       
+}
+
 .research-block{
-	width: 450px;
-    padding-top: 20px; 
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 20px;
+	width: 400px;
+    padding-top: 0px; 
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 40px;
 	 display: inline-block; 
 	text-align: left;
 }
@@ -512,4 +517,12 @@ vertical-align: middle;
     visibility: hidden;
     height: 0px;
     margin-top: -500px;
+}
+
+.headerlink {
+    color: rgba(0, 0, 0, 0);
+}
+
+.headerlink:hover {
+    color: rgba(0, 0, 0, 0);
 }
