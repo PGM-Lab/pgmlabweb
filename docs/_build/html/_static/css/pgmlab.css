@@ -33,9 +33,10 @@
 
 .header-title{   
 
-    width: 60%; 
+    width: 60vw; 
    padding-left: 5%;
-        min-width: 450px;
+        min-width: 400px;
+
 
 
 
@@ -100,11 +101,12 @@
 }
 
 .research-block{
-	width: 450px;
+	width: 90%;
+    max-width: 400px;
     padding-top: 0px; 
     padding-left: 5vw;
     padding-right: 5vw;
-    padding-bottom: 0px;
+    padding-bottom: 40px;
 	 display: inline-block; 
 	text-align: left;
 }
