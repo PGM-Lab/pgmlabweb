@@ -48,46 +48,6 @@
 
 /***************/
 
-#education {
-    background-color: white;
-    padding-top: 0px; 
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 50px;
-    text-align: center;
-}
-
-#education:before{
-    display: inline-block;
-    width: 120%;
-    height: 16px;
-        margin-left: -80px;
-    content: "";
-    background: url(../img/areas-border-top.png) no-repeat 0 0;
-    background-size: 100% 100%;
-}
-
-#education h1{
-    text-align: left;
-}
-
-
-.education-image{
-	width: 200px;
-    padding-top: 0px; 
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    	 display: inline-block; 
-vertical-align: middle;
-	text-align: left;
-    margin-left: 0px;
-    margin-top: 0px;
-}
-
-
-/***************/
-
 #facts-and-figures {
     padding-top: 30px; 
     padding-left: 80px;
@@ -139,11 +99,53 @@ vertical-align: middle;
 }
 
 
+/***************/
+
+#education {
+    background-color: lightgray;
+    padding-top: 0px; 
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+#education:before{
+    display: inline-block;
+    width: 120%;
+    height: 16px;
+        margin-left: -80px;
+    content: "";
+    background: url(../img/areas-border-top.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+#education h1{
+    text-align: left;
+}
+
+
+.education-image{
+	width: 200px;
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    	 display: inline-block; 
+vertical-align: middle;
+	text-align: left;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+
+
+
 
 /**********/
 
 #software {
-    background-color: white
+    background-color: white;
     padding-top: 20px; 
     padding-left: 40px;
     padding-right: 20px;

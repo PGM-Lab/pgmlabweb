@@ -54,39 +54,6 @@ Research
    from biology, genetics, information retrieval, crime prediction, drug discovery, autonomous driving, etc.
 
 
-
-Education 
-=====================================
-
-
-.. container:: consulting-block
-
-    .. container:: education-image
-
-     .. figure:: _static/imgs/datascientist.png
-        :align: center
-        :figwidth: 100 %
-
-    .. container:: consulting-text
-
-	**Data Science Education**: in our lab we provide different training programs for data science and machine learning at different levels.
-
-
-
-
-.. container:: consulting-block
-
-    .. container:: education-image
-
-     .. figure:: _static/imgs/phd.png
-        :align: center
-
-    .. container:: consulting-text
-
-	**PhD Program**: in our lab we offer fully funded PhD opportunities for talented students who want to go deeper in their data science and machine learning education.
-
-
-
 Facts and Figures
 =====================================
 
@@ -149,7 +116,35 @@ Facts and Figures
      Funds Raised   
      
      
-        
+Education 
+=====================================
+
+
+.. container:: consulting-block
+
+    .. container:: education-image
+
+     .. figure:: _static/imgs/datascientist.png
+        :align: center
+        :figwidth: 100 %
+
+    .. container:: consulting-text
+
+	**Data Science Education**:  in our lab we provide different training programs for data science and machine learning at different levels.
+
+
+
+
+.. container:: consulting-block
+
+    .. container:: education-image
+
+     .. figure:: _static/imgs/phd.png
+        :align: center
+
+    .. container:: consulting-text
+
+	**PhD Program**: in our lab we offer fully funded PhD opportunities for talented students who want to go deeper in their data science and machine learning education.
 
 
 Software
@@ -277,7 +272,7 @@ Success Stories
 
 
 
-Partners
+People
 =====================================
 
 
@@ -304,9 +299,6 @@ Partners
     :align: center
     
     
-|
-
-
 .. container:: partners-block
 
   .. figure:: _static/img/img.png

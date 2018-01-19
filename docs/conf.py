@@ -113,11 +113,9 @@ html_theme_options = {
      'navbar_links': [
          ("Research", "./index.html#research", 1),
          ("Education", "./index.html#education", 1),
-         ("Facts and Figures", "./index.html#facts-and-figures", 1),
          ("Software", "./index.html#software", 1),
          ("Consulting", "./index.html#consulting", 1), 
-         ("Success Stories", "./index.html#success-stories", 1), 
-         ("Partners", "./index.html#partners", 1), 
+         ("People", "./index.html#people", 1), 
          ("Contact", "./index.html#contact", 1), 
      ],
      

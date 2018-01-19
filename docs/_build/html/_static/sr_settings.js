@@ -2,7 +2,8 @@
 window.sr = ScrollReveal({ reset: true });
 
 // Custom Settings
-sr.reveal('.areas-block', { duration: 500 });
+sr.reveal('.research-block', { duration: 500 });
+sr.reveal('.education-block', { duration: 500 });
 sr.reveal('.facts-block', { duration: 500 });
 sr.reveal('.software-block', { duration: 500 });
 sr.reveal('.consulting-block', { duration: 500 });
