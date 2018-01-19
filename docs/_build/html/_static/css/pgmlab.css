@@ -1,48 +1,308 @@
-﻿
+﻿html * 
+{
+    font-family: Raleway;
+    
+}
 
 
+<<<<<<< HEAD
 /***************/
+=======
+#pgm-lab {
+    padding-top: 30px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+        background-image: url("../img/header-bg.png");
 
+    /* Set a specific height */
+    min-height: 600px; 
+>>>>>>> 9b0de12f0de361ff68797874c353e56a04061179
 
+    /* Create the parallax scrolling effect */
+    //background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    //clear: left;
+
+<<<<<<< HEAD
 #research {
     background-color: lightgray;
     padding-top: 0px; 
     padding-left: 80px;
+=======
+}
+
+
+
+
+#pgm-lab h1{
+    visibility: hidden;
+ }
+
+.header-title{   
+
+    width: 60vw; 
+   padding-left: 5%;
+        min-width: 400px;
+
+
+
+
+
+
+}
+
+.header-title2{   
+    text-align: left;
+    font-size: 800%;
+    color: #A6A6A6;
+   display:table;
+        float: left;
+
+
+
+
+}
+
+.header-subtitle{
+    display: block;
+
+    font-size: 200%;
+        color: #A6A6A6;
+
+}
+
+
+
+ 
+.header-title2{   
+    text-align: left;
+    font-size: 800%;
+    color: #A6A6A6;
+   display:table;
+        float: left;
+
+
+
+
+}
+
+/***/
+
+
+#subheader {
+    padding-top: 30px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 50px;
+    text-align: center;
+        color: white;
+/*    height: 600px  */
+
+    /* The image used */
+    background-image: url("../img/subheader.png");
+
+    /* Set a specific height */
+    min-height: 300px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-top-style: solid;
+    border-top-color: black;
+        border-bottom-style: solid;
+    border-bottom-color: black;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+    
+}
+
+
+#subheader h1{
+    visibility: hidden;
+ }
+ 
+
+.subheader-title{   
+    max-width: 500px;
+    width: 80vw;
+    text-align: left;
+    font-size: 200%;
+    color: white;
+   display:table;
+    margin: 0 auto;
+    
+
+
+
+
+}
+
+/*********/
+
+#research {
+    background-color: #d4dee9;
+    padding-top: 10px; 
+    padding-left: 0px;
+>>>>>>> 9b0de12f0de361ff68797874c353e56a04061179
     padding-right: 80px;
     padding-bottom: 50px;
     text-align: center;
+
 }
 
+<<<<<<< HEAD
+=======
+/*
+>>>>>>> 9b0de12f0de361ff68797874c353e56a04061179
 #research:before{
     display: inline-block;
-    width: 120%;
+    width: 100vw;
     height: 16px;
-        margin-left: -80px;
     content: "";
     background: url(../img/areas-border-top.png) no-repeat 0 0;
+        background-color: #B9D3E2;
+
+
     background-size: 100% 100%;
 }
+*/ 
 
 
 
 #research h1{
     text-align: left;
+    margin-left:5vw;
 }
 
 
+<<<<<<< HEAD
 .research-block{
 	width: 40%;
-    padding-top: 20px; 
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 20px;
+=======
+.content-block{
+   width:  100vw ;
+           
+
+       
+}
+
+.research-block{
+	width: 90%;
+    max-width: 400px;
+    padding-top: 0px; 
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 40px;
 	 display: inline-block; 
+	text-align: left;
+}
+
+
+
+
+.research-image{
+	
+  width: 50%;
+  margin: 0 auto;
+  display: table; 
+
+  
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+}
+
+.research-text{
+	width: 100%;
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+	 display: inline-block; 
+    vertical-align: middle;
+
+
+	text-align: left;
+    margin-left: 0px;
+}
+
+
+
+
+/***************/
+
+#education {
+    background-color: #484F5F;
+>>>>>>> 9b0de12f0de361ff68797874c353e56a04061179
+    padding-top: 20px; 
+    padding-left: 0px;
+    padding-right: 80px;
+    padding-bottom: 130px;
+    color: white;
+    text-align: center;
+    
+}
+
+#education h1{
+    text-align: left;
+    padding-left: 5vw;
+}
+
+
+.education-block{
+    width: 90%;
+	max-width: 550px;
+    padding-top: 80px; 
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 10px;
+	 display: inline-block; 
+<<<<<<< HEAD
 	text-align: center
 }
 
 #research .figure{
     width: 150px;
     padding-bottom: 20px
+=======
+
+    
+}
+
+.education-image{
+	width: 30%;
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    	 display: inline-block; 
+vertical-align: middle;
+	text-align: left;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.education-text{
+	width: 60%;
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+	 display: inline-block; 
+    vertical-align: middle;
+
+
+	text-align: left;
+    margin-left: 5%;
+>>>>>>> 9b0de12f0de361ff68797874c353e56a04061179
 }
 
 
@@ -50,15 +310,15 @@
 
 #facts-and-figures {
     padding-top: 30px; 
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 0px;
+    padding-right: 0px;
     padding-bottom: 50px;
     text-align: center;
         color: white;
 /*    height: 600px  */
 
     /* The image used */
-    background-image: url("../img/bg.jpg");
+    background-image: url("../img/facts-bg.jpg");
 
     /* Set a specific height */
     min-height: 500px; 
@@ -68,33 +328,50 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  /*  -moz-box-shadow: 0 0 30px 5px #999;*/
+/* -webkit-box-shadow: 0 0 30px 5px #999;*/
+    
+        border-top-style: solid;
+    border-top-color: black;
+        border-bottom-style: solid;
+    border-bottom-color: black;
+
 }
 
 #facts-and-figures h1{
     text-align: left;
+    padding-left: 5vw;
 }
 
 
 .facts-block{
-	width: 30%;
-    padding-top: 60px; 
+	width: 100px;
+    padding-top: 5vw; 
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 50px;
-     display: inline-block; 
-    text-align: center
+    display: inline-block; 
+    margin: 60px;
+    
+
+
+
 }
 
 .facts-num{
     text-align: center;
     font-size: 250%;
     font-weight: bold;
+    width: 100%;
+
 }
 
 .facts-text{
     text-align: center;
     font-size: 70%;
     font-weight: normal;
+    width: 100%;
+    
     
 }
 
@@ -147,8 +424,8 @@ vertical-align: middle;
 #software {
     background-color: white;
     padding-top: 20px; 
-    padding-left: 40px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
     padding-bottom: 50px;
     text-align: center;
     
@@ -156,35 +433,62 @@ vertical-align: middle;
 
 #software h1{
     text-align: left;
+    padding-left: 5vw;
+
 }
 
 
 .software-block{
-	width: 20%;
-    padding-top: 30px; 
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
+	width: 350px;
+    padding-top: 20px; 
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 20px;
 	 display: inline-block; 
-	text-align: left;
-    margin-left: 30px;
+	text-align: left
 }
 
-#software .figure{
-    width: 90px;
-    padding-bottom: 20px
+
+
+
+.software-image{
+	
+  width: 50%;
+  margin: 0 auto;
+  display: table; 
+
+  
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 10px;
 }
+
+.software-text{
+	width: 100%;
+    padding-top: 0px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+	 display: inline-block; 
+    vertical-align: middle;
+
+
+	text-align: left;
+    margin-left: 0px;
+}
+
 
 
 
 /***************/
 
 #consulting {
-    background-color: black;
+    background-color: #484F5F;
     padding-top: 20px; 
-    padding-left: 80px;
+    padding-left: 0px;
     padding-right: 80px;
-    padding-bottom: 50px;
+    padding-bottom: 130px;
     color: white;
     text-align: center;
     
@@ -192,23 +496,24 @@ vertical-align: middle;
 
 #consulting h1{
     text-align: left;
+    padding-left: 5vw;
 }
 
 
 .consulting-block{
-	width: 45%;
-    padding-top: 100px; 
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 100px;
+    width: 90%;
+	max-width: 550px;
+    padding-top: 80px; 
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 10px;
 	 display: inline-block; 
-	text-align: left;
-    margin-left: 00px;
+
     
 }
 
 .consulting-image{
-	width: 120px;
+	width: 30%;
     padding-top: 0px; 
     padding-left: 0px;
     padding-right: 0px;
@@ -221,7 +526,7 @@ vertical-align: middle;
 }
 
 .consulting-text{
-	width: 50%;
+	width: 60%;
     padding-top: 0px; 
     padding-left: 0px;
     padding-right: 0px;
@@ -231,9 +536,8 @@ vertical-align: middle;
 
 
 	text-align: left;
-    margin-left: 30px;
+    margin-left: 5%;
 }
-
 
 
 /***************/
@@ -242,7 +546,7 @@ vertical-align: middle;
 
 
 #success-stories {
-    background-color: lightgray;
+    background-color: #9AB2CC;
     padding-top: 30px; 
     padding-left: 80px;
     padding-right: 80px;
@@ -253,16 +557,6 @@ vertical-align: middle;
 
 
 
-#success-stories:before{
-    display: inline-block;
-    width: 120%;
-    height: 16px;
-        margin-left: -80px;
-    content: "";
-    background: url(../img/success-border-top.png) no-repeat 0 0;
-    background-size: 100% 100%;
-}
-
 
 #success-stories h1{
     text-align: left;
@@ -272,32 +566,34 @@ vertical-align: middle;
 
 .success-block{
 	width: 100%;
-    padding-top: 20px; 
-    padding-left: 120px;
-    padding-right: 0px;
+    padding-top: 50px; 
+    padding-left: 0px;
+    padding-right: 40px;
     padding-bottom: 10px;
-	text-align: left;
-    margin-left: 00px;
+	 display: inline-block; 
+
     
 }
 
 .success-image{
+<<<<<<< HEAD
 	width: 250px;
+=======
+	width: 30%;
+>>>>>>> 9b0de12f0de361ff68797874c353e56a04061179
     padding-top: 0px; 
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
+      margin: 0 auto;
     	 display: inline-block; 
-vertical-align: middle;
-	text-align: left;
-    margin-left: 0px;
-    margin-top: 0px;
+
 }
 
 .success-text{
-	width: 70%;
+	width: 60%;
     padding-top: 0px; 
-    padding-left: 20px;
+    padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
 	 display: inline-block; 
@@ -305,7 +601,11 @@ vertical-align: middle;
 
 
 	text-align: left;
+    margin-left: 5%;
 }
+
+
+
 
 /**********/
 
@@ -326,7 +626,7 @@ vertical-align: middle;
 
 
 .partners-block{
-	width: 15%;
+	width: 200px;
     padding-top: 30px; 
     padding-left: 30px;
     padding-right: 30px;
@@ -386,4 +686,12 @@ vertical-align: middle;
     visibility: hidden;
     height: 0px;
     margin-top: -500px;
+}
+
+.headerlink {
+    color: rgba(0, 0, 0, 0);
+}
+
+.headerlink:hover {
+    color: rgba(0, 0, 0, 0);
 }
