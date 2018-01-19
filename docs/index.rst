@@ -12,8 +12,7 @@ Subheader
 
 .. container:: subheader-title
 
-   PGMLab is a group of academic and industrial parters working in the development of intelligent applications
-   
+Last News!!!   
    
 
 
