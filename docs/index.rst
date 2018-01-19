@@ -75,43 +75,6 @@ Research
          **Intelligent Systems** are systems with the capacity of learning and reasoning. Our research also focus on developing intelligent systems for problems coming from biology, genetics, information retrieval, crime prediction, drug discovery, autonomous driving, etc.
 
 
-<<<<<<< HEAD
-=======
-
-Education 
-=====================================
-
-.. container:: content-block
-
-
-   .. container:: education-block
-
-       .. container:: education-image
-
-        .. figure:: _static/imgs/datascientist.png
-           :align: center
-
-       .. container:: education-text
-
-	   **Data Science Education**: in our lab we provide different training programs for data science and machine learning at different levels.
-
-
-
-
-   .. container:: education-block
-
-       .. container:: education-image
-
-        .. figure:: _static/imgs/phd.png
-           :align: center
-
-       .. container:: education-text
-
-	   **PhD Program**: in our lab we offer fully funded PhD opportunities for talented students who want to go deeper in their data science and machine learning education.
-
-
-
->>>>>>> 9b0de12f0de361ff68797874c353e56a04061179
 Facts and Figures
 =====================================
 
@@ -174,39 +137,43 @@ Facts and Figures
        .. container:: facts-text:
      
         Funds Raised   
-     
-     
+
 Education 
 =====================================
 
-
-.. container:: consulting-block
-
-    .. container:: education-image
-
-     .. figure:: _static/imgs/datascientist.png
-        :align: center
-        :figwidth: 100 %
-
-    .. container:: consulting-text
-
-	**Data Science Education**:  in our lab we provide different training programs for data science and machine learning at different levels.
+.. container:: content-block
 
 
+   .. container:: education-block
+
+       .. container:: education-image
+
+        .. figure:: _static/imgs/datascientist.png
+           :align: center
+
+       .. container:: education-text
+
+	   **Data Science Education**: in our lab we provide different training programs for data science and machine learning at different levels.
 
 
-.. container:: consulting-block
-
-    .. container:: education-image
-
-     .. figure:: _static/imgs/phd.png
-        :align: center
-
-    .. container:: consulting-text
-
-	**PhD Program**: in our lab we offer fully funded PhD opportunities for talented students who want to go deeper in their data science and machine learning education.
 
 
+   .. container:: education-block
+
+       .. container:: education-image
+
+        .. figure:: _static/imgs/phd.png
+           :align: center
+
+       .. container:: education-text
+
+	   **PhD Program**: in our lab we offer fully funded PhD opportunities for talented students who want to go deeper in their data science and machine learning education.
+
+
+
+
+     
+     
 Software
 =====================================
 

@@ -221,8 +221,6 @@
 
 /***************/
 
-<<<<<<< HEAD
-=======
 #education {
     background-color: #484F5F;
     padding-top: 20px; 
@@ -283,7 +281,6 @@ vertical-align: middle;
 
 /***************/
 
->>>>>>> 9b0de12f0de361ff68797874c353e56a04061179
 #facts-and-figures {
     padding-top: 30px; 
     padding-left: 0px;
@@ -350,49 +347,6 @@ vertical-align: middle;
     
     
 }
-
-
-/***************/
-
-#education {
-    background-color: lightgray;
-    padding-top: 0px; 
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 50px;
-    text-align: center;
-}
-
-#education:before{
-    display: inline-block;
-    width: 120%;
-    height: 16px;
-        margin-left: -80px;
-    content: "";
-    background: url(../img/areas-border-top.png) no-repeat 0 0;
-    background-size: 100% 100%;
-}
-
-#education h1{
-    text-align: left;
-}
-
-
-.education-image{
-	width: 200px;
-    padding-top: 0px; 
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    	 display: inline-block; 
-vertical-align: middle;
-	text-align: left;
-    margin-left: 0px;
-    margin-top: 0px;
-}
-
-
-
 
 
 /**********/
