@@ -16,4 +16,4 @@ project/plugins/project/
 .scala_dependencies
 .worksheet
 
-./docs/_build/
+./docs/_build/*

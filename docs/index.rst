@@ -152,9 +152,20 @@ Education
 
        .. container:: education-text
 
-	   **Data Science Education**: in our lab we provide different training programs for data science and machine learning at different levels.
+	   **Data Science Education**: in our lab we provide different training programs for data science at different levels.
 
 
+
+   .. container:: education-block
+
+       .. container:: education-image
+
+        .. figure:: _static/imgs/machine-learning.jpg
+           :align: center
+
+       .. container:: education-text
+
+	   **Machine Learning Education**: in our lab we provide different training programs for machine learning at different levels.
 
 
    .. container:: education-block
@@ -167,6 +178,7 @@ Education
        .. container:: education-text
 
 	   **PhD Program**: in our lab we offer fully funded PhD opportunities for talented students who want to go deeper in their data science and machine learning education.
+
 
 
 
