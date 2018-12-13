@@ -5,11 +5,7 @@ window.sr = ScrollReveal({ reset: true });
 // Custom Settings
 sr.reveal('.research-block', { duration: 500 });
 sr.reveal('.education-block', { duration: 500 });
-<<<<<<< HEAD
-sr.reveal('.facts-block', { duration: 500 });
-=======
 sr.reveal('.facts-block', { duration: 800 });
->>>>>>> 9b0de12f0de361ff68797874c353e56a04061179
 sr.reveal('.software-block', { duration: 500 });
 sr.reveal('.consulting-block', { duration: 500 });
 sr.reveal('.success-block', { duration: 500 });

@@ -12,14 +12,14 @@ Subheader
 
 .. container:: subheader-title
 
-Last News!!!   
-   
+Last News!!!
 
 
 
 
 
-Research 
+
+Research
 =====================================
 
 .. container:: content-block
@@ -31,9 +31,9 @@ Research
          .. figure:: _static/imgs/pgm.png
             :align: center
             :target: ./areas-of-expertise/topic1.html
-	    
-      .. container:: research-text  
-   
+
+      .. container:: research-text
+
          **Probabilistic Graphical Models** are open-box models which can be easily interpreted by humans. Our research focus on expanding the scope and the possibilities of this models by developing new inference and learning algorithms, and how to enhance their applicability to real world problems.
 
 
@@ -43,32 +43,32 @@ Research
 
          .. figure:: _static/imgs/pml.png
             :align: center
-	    
-      .. container:: research-text  
-   
-         **Probabilistic Machine Learning** is a branch of machine learning based on (Bayesian) probability theory. Our research focus on developing new methods to make these methods scalable to deal with massive data sets and data streams as well as applications to real world problems.    
-      
+
+      .. container:: research-text
+
+         **Probabilistic Machine Learning** is a branch of machine learning based on (Bayesian) probability theory. Our research focus on developing new methods to make these methods scalable to deal with massive data sets and data streams as well as applications to real world problems.
+
 .. container:: content-block
 
    .. container:: research-block
 
       .. container:: research-image
-   
+
          .. figure:: _static/imgs/datascience.png
             :align: center
-         
+
       .. container:: research-text
-      
+
          **Data Science** is an interdisciplinary field about scientific methods, processes, and systems to extract knowledge or insights from data. Our research  focus on novel methods to improve the scalability and the capacity of the current approaches.
 
 
    .. container:: research-block
 
       .. container:: research-image
-   
+
          .. figure:: _static/imgs/ai.png
             :align: center
-         
+
       .. container:: research-text
 
          **Intelligent Systems** are systems with the capacity of learning and reasoning. Our research also focus on developing intelligent systems for problems coming from biology, genetics, information retrieval, crime prediction, drug discovery, autonomous driving, etc.
@@ -80,64 +80,64 @@ Facts and Figures
 .. container:: content-block
 
    .. container:: facts-block
-   
+
       .. container:: facts-num:
-    
+
        19
-    
+
        .. container:: facts-text:
-     
-        Projects   
+
+        Projects
 
 
 
    .. container:: facts-block
-   
+
       .. container:: facts-num:
-    
+
        23
-    
+
        .. container:: facts-text:
-     
-        PhD Thesis   
-     
-     
-  
+
+        PhD Thesis
+
+
+
    .. container:: facts-block
-   
+
       .. container:: facts-num:
-    
+
        323
-    
+
        .. container:: facts-text:
-     
-        Publications   
-     
-     
+
+        Publications
+
+
 
    .. container:: facts-block
-   
+
       .. container:: facts-num:
-    
+
        15
-    
+
        .. container:: facts-text:
-     
-        Researchers   
-     
-     
+
+        Researchers
+
+
 
    .. container:: facts-block
-   
-      .. container:: facts-num:
-    
-       978000€
-    
-       .. container:: facts-text:
-     
-        Funds Raised   
 
-Education 
+      .. container:: facts-num:
+
+       978000€
+
+       .. container:: facts-text:
+
+        Funds Raised
+
+Education
 =====================================
 
 .. container:: content-block
@@ -183,8 +183,8 @@ Education
 
 
 
-     
-     
+
+
 Software
 =====================================
 
@@ -198,7 +198,7 @@ Software
             :align: center
 
       .. container:: software-text
-      
+
          **InferPy** is a high-level API for deep probabilistic modeling written in Python and capable    of running on top of Edward and Tensorflow. InferPy's API is strongly inspired by Keras and it has a focus on enabling flexible data processing, easy-to-code probablistic modelling and scalable inference.
 
 
@@ -208,10 +208,10 @@ Software
 
          .. figure:: _static/imgs/amidst.png
             :align: center
-      
+
        .. container:: software-text
 
-         The **AMIDST Toolbox** is an open source Java software for scalable probabilistic machine learning with a special focus on (massive) streaming data. The toolbox supports a flexible modelling language based on probabilistic graphical models with latent variables. 
+         The **AMIDST Toolbox** is an open source Java software for scalable probabilistic machine learning with a special focus on (massive) streaming data. The toolbox supports a flexible modelling language based on probabilistic graphical models with latent variables.
 
    .. container:: software-block
 
@@ -269,19 +269,19 @@ Success Stories
 
        .. container:: success-image
 
-        .. figure:: _static/imgs/credits.png
+        .. figure:: _static/imgs/credits.jpg
            :align: center
 
        .. container:: success-text
 
-	      **Risk prediction in credit operations** with the AMIDST Toolbox. The problem consisted on predicting wether a client is going to default in one of his/her credits during the coming twelve months. Data was collected continuously and reported on a monthly basis, this gives rise to a streaming data classification problem. 
+	      **Risk prediction in credit operations** with the AMIDST Toolbox. The problem consisted on predicting wether a client is going to default in one of his/her credits during the coming twelve months. Data was collected continuously and reported on a monthly basis, this gives rise to a streaming data classification problem.
 
 
    .. container:: success-block
 
        .. container:: success-image
 
-        .. figure:: _static/imgs/cars.png
+        .. figure:: _static/imgs/cars.jpg
            :align: center
 
        .. container:: success-text
@@ -305,7 +305,7 @@ Success Stories
 
        .. container:: success-image
 
-        .. figure:: _static/imgs/sectors.png
+        .. figure:: _static/imgs/sectors.jpg
            :align: center
 
        .. container:: success-text
@@ -320,83 +320,76 @@ People
 
 
 
-.. container:: partners-block
-
-  .. figure:: _static/img/img.png
-    :align: center
-    
-    
-    
-
-.. container:: partners-block
+.. container:: people-block
 
   .. figure:: _static/img/img.png
     :align: center
 
 
+.. container:: people-block
+
+   .. container:: people-image
+
+      .. figure:: _static/img/img.png
+         :align: center
+
+   .. container:: people-text
+
+      .. container:: name
+         Antonio Salmerón Cerdán
+
+      .. container:: role
+         Professor
 
 
-.. container:: partners-block
 
-  .. figure:: _static/img/img.png
-    :align: center
-    
-    
-.. container:: partners-block
-
-  .. figure:: _static/img/img.png
-    :align: center
-    
-    
-
-.. container:: partners-block
-
-  .. figure:: _static/img/img.png
-    :align: center
-    
-    
-    
-    
-    
-    
-
-.. container:: partners-block
+.. container:: people-block
 
   .. figure:: _static/img/img.png
     :align: center
-    
-    
-    
-    
-    
-    
 
-.. container:: partners-block
+
+.. container:: people-block
 
   .. figure:: _static/img/img.png
     :align: center
-    
-    
-    
-    
-    
 
-.. container:: partners-block
+
+
+.. container:: people-block
 
   .. figure:: _static/img/img.png
     :align: center
-    
-    
-    
+
+
+.. container:: people-block
+
+  .. figure:: _static/img/img.png
+    :align: center
+
+
+.. container:: people-block
+
+  .. figure:: _static/img/img.png
+    :align: center
+
+
+.. container:: people-block
+
+  .. figure:: _static/img/img.png
+    :align: center
+
+
+
 Contact
 =======================
-        
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+You can find us in the next address:
+
+Science, Information Technology and Communications (CITIC) building
+Floor 2, Room 2.08
+
 
   .. image:: _static/img/mail.png
 
 contact@server.com
-
-   
-
-
