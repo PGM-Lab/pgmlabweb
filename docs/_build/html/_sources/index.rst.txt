@@ -18,6 +18,10 @@ Last News!!!
 Research
 =====================================
 
+*****
+title
+*****
+
 .. container:: content-block
 
    .. container:: research-block
@@ -50,7 +54,7 @@ Research
 
       .. container:: research-image
 
-         .. figure:: _static/imgs/datascience.png
+         .. figure:: _static/imgs/datascience.jpg
             :align: center
 
       .. container:: research-text
@@ -143,12 +147,12 @@ Education
 
        .. container:: education-image
 
-        .. figure:: _static/imgs/datascientist.png
-           :align: center
+          .. figure:: _static/imgs/datascientist.jpg
+             :align: center
 
        .. container:: education-text
 
-	   **Data Science Education**: in our lab we provide different training programs for data science at different levels.
+	        **Data Science Education**: in our lab we provide different training programs for data science at different levels.
 
 
 
@@ -415,7 +419,6 @@ You can find us in the next address:
 Science, Information Technology and Communications (CITIC) building
 Floor 2, Room 2.08
 
-
-  .. image:: _static/img/mail.png
+.. image:: _static/img/mail.png
 
 contact@server.com
