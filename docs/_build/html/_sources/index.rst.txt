@@ -15,10 +15,6 @@ Subheader
 Last News!!!
 
 
-
-
-
-
 Research
 =====================================
 
@@ -319,12 +315,22 @@ People
 =====================================
 
 
-
 .. container:: people-block
 
-  .. figure:: _static/img/img.png
-    :align: center
+   .. container:: people-image
 
+      .. figure:: _static/imgs/antonio.jpg
+         :align: center
+
+   .. container:: people-text
+
+      .. container:: name
+
+         Antonio Salmerón
+
+      .. container:: role
+
+         Professor
 
 .. container:: people-block
 
@@ -336,48 +342,68 @@ People
    .. container:: people-text
 
       .. container:: name
-         Antonio Salmerón Cerdán
+
+         Rafael Rumí
 
       .. container:: role
-         Professor
+
+         Assistant Professor
 
 
 
 .. container:: people-block
 
-  .. figure:: _static/img/img.png
-    :align: center
+   .. container:: people-image
+
+      .. figure:: _static/imgs/andres.jpg
+         :align: center
+
+   .. container:: people-text
+
+      .. container:: name
+
+         Andrés Ramón Masegosa
+
+      .. container:: role
+
+         Lecturer
 
 
 .. container:: people-block
 
-  .. figure:: _static/img/img.png
-    :align: center
+   .. container:: people-image
+
+      .. figure:: _static/imgs/rafa.jpg
+         :align: center
+
+   .. container:: people-text
+
+      .. container:: name
+
+         Rafael Cabañas
+
+      .. container:: role
+
+         Researcher
 
 
 
 .. container:: people-block
 
-  .. figure:: _static/img/img.png
-    :align: center
+   .. container:: people-image
 
+      .. figure:: _static/imgs/ana.png
+         :align: center
 
-.. container:: people-block
+   .. container:: people-text
 
-  .. figure:: _static/img/img.png
-    :align: center
+      .. container:: name
 
+         Ana Devaki Maldonado
 
-.. container:: people-block
+      .. container:: role
 
-  .. figure:: _static/img/img.png
-    :align: center
-
-
-.. container:: people-block
-
-  .. figure:: _static/img/img.png
-    :align: center
+         Researcher
 
 
 

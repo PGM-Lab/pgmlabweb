@@ -560,32 +560,24 @@ vertical-align: middle;
 }
 .people-block{
 	width: 15%;
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-	 display: inline-block;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+	display: inline-block;
 	text-align: left;
 }
 
 .people-text{
-  width: 50%;
   padding-top: 0px;
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
-	display: inline-block;
-  vertical-align: middle;
-  text-align: left;
-  margin-left: 5%;
+  text-align: center;
 }
 
 .name{
-
-}
-
-.role{
-  
+  font-weight: bold;
 }
 
 
