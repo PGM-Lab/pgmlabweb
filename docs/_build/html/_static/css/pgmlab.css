@@ -37,54 +37,35 @@ h1{
 
 .header-title{
 
-    width: 60vw;
+   width: 60vw;
    padding-left: 5%;
-        min-width: 400px;
-
-
-
-
-
-
+   min-width: 400px;
 }
 
 .header-title2{
     text-align: left;
     font-size: 800%;
     color: #A6A6A6;
-   display:table;
-        float: left;
-
-
-
-
+    display:table;
+    float: left;
 }
 
 .header-subtitle{
     display: block;
-
     font-size: 200%;
-        color: #A6A6A6;
+    color: #A6A6A6;
 
 }
-
-
-
 
 .header-title2{
     text-align: left;
     font-size: 800%;
     color: #A6A6A6;
-   display:table;
-        float: left;
-
-
-
-
+    display:table;
+    float: left;
 }
 
 /***/
-
 
 #subheader {
     padding-top: 30px;
@@ -92,15 +73,11 @@ h1{
     padding-right: 0px;
     padding-bottom: 50px;
     text-align: center;
-        color: white;
-/*    height: 600px  */
-
+    color: white;
     /* The image used */
     background-image: url("../img/subheader.png");
-
     /* Set a specific height */
     min-height: 300px;
-
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -109,11 +86,9 @@ h1{
 
     border-top-style: solid;
     border-top-color: black;
-        border-bottom-style: solid;
+    border-bottom-style: solid;
     border-bottom-color: black;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-
-
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 
@@ -122,25 +97,11 @@ h1{
  }
 
 
-.subheader-title{
-    max-width: 500px;
-    width: 80vw;
-    text-align: left;
-    font-size: 200%;
-    color: white;
-   display:table;
-    margin: 0 auto;
-
-
-
-
-
-}
-
 /*********/
 
 #research {
-    background-color: #d4dee9;
+    /*background-color: #d4dee9;*/
+    background-image: linear-gradient(to bottom, rgba(212,222,233,1), rgba(146,153,160,0.2));
     padding-top: 10px;
     padding-left: 0px;
     padding-right: 80px;
@@ -170,18 +131,10 @@ h1{
     margin-left:5%;
 }
 
-#research h2{
-text-align:left;
-font-weight: bold;
-text-decoration: underline;
-}
 
-.content-block{
-   /*width:  100vw ;*/
-
-
-
-}
+/*.content-block{
+   width:  100vw ;
+ }*/
 
 .research-block{
 /*	width: 90%;
@@ -191,10 +144,22 @@ text-decoration: underline;
     padding-right: 5vw;
     padding-bottom: 40px;
 	 /*display: inline-block;*/
-	text-align: left;
+	  text-align: left;
+    margin-top: 2%;
 }
 
+.line-separator{
+  height: 0.5em;
+  border-bottom: 0.5em solid #000;
+  margin-bottom: 2%;
+}
 
+.research-title{
+  text-align:left;
+  text-decoration: underline;
+  font-size: 1.5em;
+  font-weight: bold;
+}
 
 
 .research-image{
@@ -228,7 +193,7 @@ text-decoration: underline;
 	text-align: left;
     margin-left: 0px;*/
 
-    width: 60%;
+    width: 80%;
     padding-top: 0px;
     padding-left: 0px;
     padding-right: 0px;
@@ -236,7 +201,7 @@ text-decoration: underline;
     display: inline-block;
     vertical-align: middle;
     text-align: left;
-    margin-left: 5%;
+    margin-left: 3%;
 }
 
 

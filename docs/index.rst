@@ -18,13 +18,19 @@ Last News!!!
 Research
 =====================================
 
-*****
-title
-*****
+
 
 .. container:: content-block
 
    .. container:: research-block
+
+      .. container:: line-separator
+
+         ..
+
+      .. container:: research-title
+
+         Probabilistic Graphical Models
 
       .. container:: research-image
 
@@ -36,21 +42,34 @@ title
 
          **Probabilistic Graphical Models** are open-box models which can be easily interpreted by humans. Our research focus on expanding the scope and the possibilities of this models by developing new inference and learning algorithms, and how to enhance their applicability to real world problems.
 
-
    .. container:: research-block
+
+      .. container:: line-separator
+
+         ..
+
+      .. container:: research-title
+
+         Probabilistic Machine Learning
 
       .. container:: research-image
 
-         .. figure:: _static/imgs/pml.png
+         .. figure:: _static/imgs/pml.jpg
             :align: center
 
       .. container:: research-text
 
          **Probabilistic Machine Learning** is a branch of machine learning based on (Bayesian) probability theory. Our research focus on developing new methods to make these methods scalable to deal with massive data sets and data streams as well as applications to real world problems.
 
-.. container:: content-block
-
    .. container:: research-block
+
+      .. container:: line-separator
+
+         ..
+
+      .. container:: research-title
+
+         Data Science
 
       .. container:: research-image
 
@@ -61,8 +80,15 @@ title
 
          **Data Science** is an interdisciplinary field about scientific methods, processes, and systems to extract knowledge or insights from data. Our research  focus on novel methods to improve the scalability and the capacity of the current approaches.
 
-
    .. container:: research-block
+
+      .. container:: line-separator
+
+         ..
+
+      .. container:: research-title
+
+         Intelligent Systems
 
       .. container:: research-image
 
