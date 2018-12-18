@@ -14,7 +14,7 @@ h1{
     padding-right: 0px;
     padding-bottom: 0px;
     text-align: center;
-        background-image: url("../img/header-bg.png");
+    background-image: url("../img/header-bg.png");
 
     /* Set a specific height */
     min-height: 600px;
@@ -25,6 +25,9 @@ h1{
     background-repeat: no-repeat;
     background-size: cover;
     //clear: left;
+
+    /* Black border at the bottom */
+    border-bottom: 1.2em solid gray;
 
 }
 
@@ -101,7 +104,7 @@ h1{
 
 #research {
     /*background-color: #d4dee9;*/
-    background-image: linear-gradient(to bottom, rgba(212,222,233,1), rgba(146,153,160,0.2));
+    background-image: linear-gradient(to bottom, rgba(212,222,233,1), rgba(146,153,160,0.1));
     padding-top: 10px;
     padding-left: 0px;
     padding-right: 80px;
@@ -178,6 +181,10 @@ h1{
   width: 10%;
   margin: 0 auto;
   display: inline-block;
+  /* Round corner */
+  border-radius: 1em;
+  border: 0.3em solid #FFF;
+  margin-top: 1%;
 }
 
 .research-text{
@@ -228,18 +235,16 @@ h1{
 
 .education-block{
     width: 90%;
-	max-width: 550px;
+	  max-width: 550px;
     padding-top: 80px;
     padding-left: 5vw;
     padding-right: 5vw;
     padding-bottom: 10px;
-	 display: inline-block;
-
-
+	  display: inline-block;
 }
 
 .education-image{
-	width: 30%;
+	width: 50%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -255,17 +260,19 @@ vertical-align: middle;
 
 }
 
+.education-image img{
+  border-radius: 0.3em 1.2em;
+}
+
 .education-text{
-	width: 60%;
+	  width: 60%;
     padding-top: 0px;
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
-	 display: inline-block;
+	  display: inline-block;
     vertical-align: middle;
-
-
-	text-align: left;
+    text-align: left;
     margin-left: 5%;
 }
 
@@ -279,7 +286,7 @@ vertical-align: middle;
     padding-right: 0px;
     padding-bottom: 50px;
     text-align: center;
-        color: white;
+    color: white;
 /*    height: 600px  */
 
     /* The image used */
@@ -296,9 +303,9 @@ vertical-align: middle;
   /*  -moz-box-shadow: 0 0 30px 5px #999;*/
 /* -webkit-box-shadow: 0 0 30px 5px #999;*/
 
-        border-top-style: solid;
+    border-top-style: solid;
     border-top-color: black;
-        border-bottom-style: solid;
+    border-bottom-style: solid;
     border-bottom-color: black;
 
 }
@@ -310,17 +317,13 @@ vertical-align: middle;
 
 
 .facts-block{
-	width: 100px;
+	  width: 100px;
     padding-top: 5vw;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 50px;
     display: inline-block;
     margin: 60px;
-
-
-
-
 }
 
 .facts-num{
@@ -350,7 +353,6 @@ vertical-align: middle;
     padding-right: 0px;
     padding-bottom: 50px;
     text-align: center;
-
 }
 
 #software h1{
@@ -360,42 +362,34 @@ vertical-align: middle;
 
 
 .software-block{
-	width: 350px;
+	  width: 350px;
     padding-top: 20px;
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 20px;
-	 display: inline-block;
-	text-align: left
+	  display: inline-block;
+	  text-align: left
 }
 
-
-
-
 .software-image{
-
   width: 50%;
   margin: 0 auto;
   display: table;
-
-
-    padding-top: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 10px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 10px;
 }
 
 .software-text{
-	width: 100%;
+	  width: 100%;
     padding-top: 0px;
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
-	 display: inline-block;
+	  display: inline-block;
     vertical-align: middle;
-
-
-	text-align: left;
+    text-align: left;
     margin-left: 0px;
 }
 
@@ -423,40 +417,38 @@ vertical-align: middle;
 
 .consulting-block{
     width: 90%;
-	max-width: 550px;
+	  max-width: 550px;
     padding-top: 80px;
     padding-left: 5vw;
     padding-right: 5vw;
     padding-bottom: 10px;
-	 display: inline-block;
+	  display: inline-block;
 
 
 }
 
 .consulting-image{
-	width: 30%;
+	  width: 30%;
     padding-top: 0px;
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
-    	 display: inline-block;
-vertical-align: middle;
-	text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+	  text-align: left;
     margin-left: 0px;
     margin-top: 0px;
 }
 
 .consulting-text{
-	width: 60%;
+	  width: 60%;
     padding-top: 0px;
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
-	 display: inline-block;
+	  display: inline-block;
     vertical-align: middle;
-
-
-	text-align: left;
+    text-align: left;
     margin-left: 5%;
 }
 
@@ -476,14 +468,9 @@ vertical-align: middle;
     align-content: center;
 }
 
-
-
-
 #success-stories h1{
   text-align: left;
 }
-
-
 
 .success-block{
 	width: 100%;
@@ -492,8 +479,6 @@ vertical-align: middle;
   padding-right: 40px;
   padding-bottom: 10px;
 	display: inline-block;
-
-
 }
 
 .success-image{
@@ -504,7 +489,6 @@ vertical-align: middle;
   padding-bottom: 0px;
   margin: 0 auto;
   display: inline-block;
-
 }
 
 .success-image img{
@@ -590,7 +574,37 @@ vertical-align: middle;
 }
 
 #contact p, #contact img{
-margin-left: 5%;
+  margin-left: 5%;
+}
+
+.contact-block{
+	width: 100%;
+  padding-top: 50px;
+  padding-left: 0px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+	display: inline-block;
+}
+
+.contact-image{
+	width: 30%;
+  padding: 0 0 0 0;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.contact-text{
+	width: 30%;
+  padding: 0 0 0 0;
+	display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  margin-left: 5%;
+}
+
+/* Google maps */
+.mapouter{
+  margin: 0 0 1% 5%;
 }
 
 

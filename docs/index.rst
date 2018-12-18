@@ -7,12 +7,12 @@ PGM Lab
        :align: left
 
 
-Subheader
+.. Subheader
 ===========================
 
 .. container:: subheader-title
 
-Last News!!!
+.. Last News!!!
 
 
 Research
@@ -206,11 +206,6 @@ Education
 	   **PhD Program**: in our lab we offer fully funded PhD opportunities for talented students who want to go deeper in their data science and machine learning education.
 
 
-
-
-
-
-
 Software
 =====================================
 
@@ -223,10 +218,9 @@ Software
          .. figure:: _static/imgs/inferpy.png
             :align: center
 
-      .. container:: software-text
+         .. container:: software-text
 
-         **InferPy** is a high-level API for deep probabilistic modeling written in Python and capable    of running on top of Edward and Tensorflow. InferPy's API is strongly inspired by Keras and it has a focus on enabling flexible data processing, easy-to-code probablistic modelling and scalable inference.
-
+            **InferPy** is a high-level API for deep probabilistic modeling written in Python and capable of running on top of Edward and Tensorflow. InferPy's API is strongly inspired by Keras and it has a focus on enabling flexible data processing, easy-to-code probablistic modelling and scalable inference.
 
    .. container:: software-block
 
@@ -237,14 +231,14 @@ Software
 
        .. container:: software-text
 
-         The **AMIDST Toolbox** is an open source Java software for scalable probabilistic machine learning with a special focus on (massive) streaming data. The toolbox supports a flexible modelling language based on probabilistic graphical models with latent variables.
+          The **AMIDST Toolbox** is an open source Java software for scalable probabilistic machine learning with a special focus on (massive) streaming data. The toolbox supports a flexible modelling language based on probabilistic graphical models with latent variables.
 
    .. container:: software-block
 
       .. container:: software-figure
 
          .. figure:: _static/imgs/elvira.jpg
-            :align: center
+           :align: center
 
       .. container:: software-text
 
@@ -445,6 +439,27 @@ You can find us in the next address:
 Science, Information Technology and Communications (CITIC) building
 Floor 2, Room 2.08
 
-.. image:: _static/img/mail.png
+.. raw:: html
+   :file: _static/location.html
 
-contact@server.com
+.. container:: contact-block
+
+   .. container:: contact-image
+
+      .. figure:: _static/imgs/mail.png
+         :align: center
+
+   .. container:: contact-text
+
+      pgm@ual.es
+
+.. container:: contact-block
+
+   .. container:: contact-image
+
+      .. figure:: _static/imgs/phone.png
+         :align: center
+
+   .. container:: contact-text
+
+      950777777
