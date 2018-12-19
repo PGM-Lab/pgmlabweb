@@ -457,7 +457,7 @@ Floor 2, Room 2.08
 
    .. container:: contact-image
 
-      .. figure:: _static/imgs/mail.png
+      .. figure:: _static/imgs/phone.png
          :align: center
 
    .. container:: contact-text

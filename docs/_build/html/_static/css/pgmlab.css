@@ -577,19 +577,21 @@ vertical-align: middle;
   margin-left: 5%;
 }
 
+#contact a{
+  color: white;
+}
+
 .contact-block{
 	width: 100%;
-  padding-top: 50px;
   padding-left: 0px;
   padding-right: 40px;
-  padding-bottom: 10px;
 	display: inline-block;
 }
 
 .contact-image{
-	width: 30%;
+	width: 10%;
   padding: 0 0 0 0;
-  margin: 0 auto;
+  margin-left: 2%;
   display: inline-block;
 }
 
@@ -599,7 +601,7 @@ vertical-align: middle;
 	display: inline-block;
   vertical-align: middle;
   text-align: left;
-  margin-left: 5%;
+  font-weight: bold;
 }
 
 /* Google maps */
