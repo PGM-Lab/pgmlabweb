@@ -360,7 +360,7 @@ People
 
    .. container:: people-image
 
-      .. figure:: _static/img/img.png
+      .. figure:: _static/imgs/rumi.jpg
          :align: center
 
    .. container:: people-text

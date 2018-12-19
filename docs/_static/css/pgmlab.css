@@ -528,10 +528,12 @@ vertical-align: middle;
   padding-left: 5%;
 }
 
-.success-people{
-    width: 30%;
-
+.people-image{
+  width: 50%;
+  display: table;
+  margin: 0 auto;
 }
+
 .people-block{
 	width: 15%;
   padding-top: 30px;

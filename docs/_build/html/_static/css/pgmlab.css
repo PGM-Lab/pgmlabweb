@@ -528,10 +528,10 @@ vertical-align: middle;
   padding-left: 5%;
 }
 
-.success-people{
-    width: 30%;
-
+.people-image{
+  width: 30%;
 }
+
 .people-block{
 	width: 15%;
   padding-top: 30px;
@@ -573,7 +573,12 @@ vertical-align: middle;
   padding-left: 5%;
 }
 
-#contact p, #contact img{
+#contact p{
+  margin-left: 5%;
+  font-size: medium;
+}
+
+#contact img{
   margin-left: 5%;
 }
 
@@ -602,6 +607,7 @@ vertical-align: middle;
   vertical-align: middle;
   text-align: left;
   font-weight: bold;
+  font-size: large;
 }
 
 /* Google maps */
