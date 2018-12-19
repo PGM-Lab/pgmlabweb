@@ -332,8 +332,12 @@ Success Stories
 
            **Sales Force Designing**. This technology transfer project (subject to a "non-disclousure agreement") was made in collaboration with the company Gobile. The project mainly consisted on the design of an artifical based software to address the problems in the design of a sales force.  This problem involves the solution of several interrelated problems:  sizing the sales force,  the problem of finding the appropriate number of salesman;  salesmen location,  the problem of selecting the location of each salesman in one sales coverage unit;  sales territory alignment,  the problem of groupingor clustering sales coverage unit into larger geographical groups; and sales resources allocation, the problem of assigning work hours of the salesman to different sales territories, considering also a broad set of restrictions which are normally associated to it.
 
+Publications
+=====================================
 
+.. container:: content-block
 
+   .. container:: publications-block
 
 People
 =====================================
@@ -410,8 +414,6 @@ People
 
          Researcher
 
-
-
 .. container:: people-block
 
    .. container:: people-image
@@ -429,6 +431,39 @@ People
 
          Researcher
 
+.. container:: people-block
+
+   .. container:: people-image
+
+      .. figure:: _static/imgs/cozar.jpg
+         :align: center
+
+   .. container:: people-text
+
+      .. container:: name
+
+         Javier Cózar
+
+      .. container:: role
+
+         Researcher
+
+.. container:: people-block
+
+   .. container:: people-image
+
+      .. figure:: _static/imgs/juanje.png
+         :align: center
+
+   .. container:: people-text
+
+      .. container:: name
+
+         Juan Jesús Ojeda
+
+      .. container:: role
+
+         Researcher
 
 
 Contact

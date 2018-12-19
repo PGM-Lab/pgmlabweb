@@ -529,7 +529,9 @@ vertical-align: middle;
 }
 
 .people-image{
-  width: 30%;
+  width: 50%;
+  display: table;
+  margin: 0 auto;
 }
 
 .people-block{
