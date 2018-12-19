@@ -414,6 +414,20 @@ People
 
          Researcher
 
+   .. container:: people-mail
+
+      .. container:: mail-icon
+
+         .. figure:: _static/imgs/mail_black.png
+            :align: center
+
+      .. container:: mail-text
+
+         rcabanas@cs.aau.dk
+
+   .. container:: people-social
+
+
 .. container:: people-block
 
    .. container:: people-image

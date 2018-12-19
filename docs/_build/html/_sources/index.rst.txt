@@ -332,7 +332,7 @@ Success Stories
 
            **Sales Force Designing**. This technology transfer project (subject to a "non-disclousure agreement") was made in collaboration with the company Gobile. The project mainly consisted on the design of an artifical based software to address the problems in the design of a sales force.  This problem involves the solution of several interrelated problems:  sizing the sales force,  the problem of finding the appropriate number of salesman;  salesmen location,  the problem of selecting the location of each salesman in one sales coverage unit;  sales territory alignment,  the problem of groupingor clustering sales coverage unit into larger geographical groups; and sales resources allocation, the problem of assigning work hours of the salesman to different sales territories, considering also a broad set of restrictions which are normally associated to it.
 
-Publications
+.. Publications
 =====================================
 
 .. container:: content-block
@@ -413,6 +413,20 @@ People
       .. container:: role
 
          Researcher
+
+   .. container:: people-mail
+
+      .. container:: mail-icon
+
+         .. figure:: _static/imgs/mail_black.png
+            :align: center
+
+      .. container:: mail-text
+
+         rcabanas@cs.aau.dk
+
+   .. container:: people-social
+
 
 .. container:: people-block
 
