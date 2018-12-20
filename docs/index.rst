@@ -248,36 +248,29 @@ Software
 Consultancy
 =====================================
 
-
 .. container:: content-block
 
-   .. container:: consulting-block
+   .. container:: consultancy-block
 
-       .. container:: consulting-image
-
-        .. figure:: _static/img/img.png
-           :align: center
-
-       .. container:: consulting-text
-
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-
-
-
-
-   .. container:: consulting-block
-
-       .. container:: consulting-image
+       .. container:: consultancy-image
 
         .. figure:: _static/img/img.png
            :align: center
 
-       .. container:: consulting-text
+       .. container:: consultancy-text
 
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
+   .. container:: consultancy-block
 
+       .. container:: consultancy-image
+
+        .. figure:: _static/img/img.png
+           :align: center
+
+       .. container:: consultancy-text
+
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
 
 Success Stories
@@ -331,13 +324,6 @@ Success Stories
        .. container:: success-text
 
            **Sales Force Designing**. This technology transfer project (subject to a "non-disclousure agreement") was made in collaboration with the company Gobile. The project mainly consisted on the design of an artifical based software to address the problems in the design of a sales force.  This problem involves the solution of several interrelated problems:  sizing the sales force,  the problem of finding the appropriate number of salesman;  salesmen location,  the problem of selecting the location of each salesman in one sales coverage unit;  sales territory alignment,  the problem of groupingor clustering sales coverage unit into larger geographical groups; and sales resources allocation, the problem of assigning work hours of the salesman to different sales territories, considering also a broad set of restrictions which are normally associated to it.
-
-Publications
-=====================================
-
-.. container:: content-block
-
-   .. container:: publications-block
 
 People
 =====================================
@@ -423,9 +409,24 @@ People
 
       .. container:: mail-text
 
-         rcabanas@cs.aau.dk
+         rcabanas@ual.es
 
    .. container:: people-social
+
+      .. container:: social-github
+
+         .. figure:: _static/imgs/github.png
+            :align: center
+
+      .. container:: social-linkedin
+
+         .. figure:: _static/imgs/linkedin.png
+            :align: center
+
+      .. container:: social-scholar
+
+         .. figure:: _static/imgs/google-scholar.png
+            :align: center
 
 
 .. container:: people-block
