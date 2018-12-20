@@ -569,6 +569,10 @@ vertical-align: middle;
   vertical-align: middle;
 }
 
+.people-social{
+  text-align: center;
+}
+
 .social-github{
   width: 20%;
   display: inline-block;
@@ -580,6 +584,11 @@ vertical-align: middle;
 }
 
 .social-scholar{
+  width: 20%;
+  display: inline-block;
+}
+
+.social-website{
   width: 20%;
   display: inline-block;
 }

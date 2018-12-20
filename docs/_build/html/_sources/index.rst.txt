@@ -328,7 +328,6 @@ Success Stories
 People
 =====================================
 
-
 .. container:: people-block
 
    .. container:: people-image
@@ -345,6 +344,34 @@ People
       .. container:: role
 
          Professor
+
+   .. container:: people-mail
+
+      .. container:: mail-icon
+
+         .. figure:: _static/imgs/mail_black.png
+            :align: center
+
+      .. container:: mail-text
+
+         antonio.salmeron@ual.es
+
+   .. container:: people-social
+
+       .. container:: social-github
+
+          .. figure:: _static/imgs/github.png
+             :align: center
+
+       .. container:: social-linkedin
+
+           .. figure:: _static/imgs/linkedin.png
+              :align: center
+
+       .. container:: social-scholar
+
+           .. figure:: _static/imgs/google-scholar.png
+              :align: center
 
 .. container:: people-block
 
@@ -363,7 +390,33 @@ People
 
          Associate Professor
 
+   .. container:: people-mail
 
+      .. container:: mail-icon
+
+         .. figure:: _static/imgs/mail_black.png
+            :align: center
+
+      .. container:: mail-text
+
+         rrumi@ual.es
+
+   .. container:: people-social
+
+      .. container:: social-github
+
+         .. figure:: _static/imgs/github.png
+            :align: center
+
+      .. container:: social-linkedin
+
+         .. figure:: _static/imgs/linkedin.png
+            :align: center
+
+      .. container:: social-scholar
+
+         .. figure:: _static/imgs/google-scholar.png
+            :align: center
 
 .. container:: people-block
 
@@ -382,6 +435,33 @@ People
 
          Lecturer
 
+   .. container:: people-mail
+
+       .. container:: mail-icon
+
+          .. figure:: _static/imgs/mail_black.png
+             :align: center
+
+       .. container:: mail-text
+
+          andresmasegosa@ual.es
+
+   .. container:: people-social
+
+      .. container:: social-github
+
+         .. figure:: _static/imgs/github.png
+            :align: center
+
+      .. container:: social-linkedin
+
+         .. figure:: _static/imgs/linkedin.png
+            :align: center
+
+      .. container:: social-scholar
+
+         .. figure:: _static/imgs/google-scholar.png
+            :align: center
 
 .. container:: people-block
 
@@ -417,17 +497,19 @@ People
 
          .. figure:: _static/imgs/github.png
             :align: center
+            :target: https://github.com/rcabanasdepaz
 
       .. container:: social-linkedin
 
          .. figure:: _static/imgs/linkedin.png
             :align: center
+            :target: https://www.linkedin.com/in/rcabanasdepaz
 
       .. container:: social-scholar
 
          .. figure:: _static/imgs/google-scholar.png
             :align: center
-
+            :target: https://scholar.google.es/citations?user=5ApYDHcAAAAJ
 
 .. container:: people-block
 
@@ -446,6 +528,34 @@ People
 
          Researcher
 
+   .. container:: people-mail
+
+      .. container:: mail-icon
+
+         .. figure:: _static/imgs/mail_black.png
+            :align: center
+
+      .. container:: mail-text
+
+         ana.d.maldonado@ual.es
+
+   .. container:: people-social
+
+      .. container:: social-github
+
+         .. figure:: _static/imgs/github.png
+            :align: center
+
+      .. container:: social-linkedin
+
+         .. figure:: _static/imgs/linkedin.png
+            :align: center
+
+      .. container:: social-scholar
+
+         .. figure:: _static/imgs/google-scholar.png
+            :align: center
+
 .. container:: people-block
 
    .. container:: people-image
@@ -463,6 +573,43 @@ People
 
          Researcher
 
+   .. container:: people-mail
+
+      .. container:: mail-icon
+
+         .. figure:: _static/imgs/mail_black.png
+            :align: center
+
+      .. container:: mail-text
+
+         jcozar87@ual.es
+
+   .. container:: people-social
+
+      .. container:: social-github
+
+         .. figure:: _static/imgs/github.png
+            :align: center
+            :target: https://github.com/jcozar87
+
+      .. container:: social-linkedin
+
+         .. figure:: _static/imgs/linkedin.png
+            :align: center
+            :target: https://www.linkedin.com/in/javiercozar/
+
+      .. container:: social-scholar
+
+         .. figure:: _static/imgs/google-scholar.png
+            :align: center
+            :target: https://scholar.google.es/citations?user=SDHr89gAAAAJ&hl=es
+
+      .. container:: social-website
+
+         .. figure:: _static/imgs/website.png
+            :align: center
+            :target: http://www.jcozar.es/
+
 .. container:: people-block
 
    .. container:: people-image
@@ -479,6 +626,37 @@ People
       .. container:: role
 
          Researcher
+
+   .. container:: people-mail
+
+      .. container:: mail-icon
+
+         .. figure:: _static/imgs/mail_black.png
+            :align: center
+
+      .. container:: mail-text
+
+         juanje.ojeda@ual.es
+
+   .. container:: people-social
+
+      .. container:: social-github
+
+         .. figure:: _static/imgs/github.png
+            :align: center
+            :target: https://github.com/castelock
+
+      .. container:: social-linkedin
+
+         .. figure:: _static/imgs/linkedin.png
+            :align: center
+            :target: https://www.linkedin.com/in/juan-jes%C3%BAs-ojeda-castelo-b6b75185/
+
+      .. container:: social-scholar
+
+         .. figure:: _static/imgs/google-scholar.png
+            :align: center
+            :target: https://scholar.google.com/citations?user=eDPl4-QAAAAJ&hl=en
 
 
 Contact
