@@ -245,7 +245,7 @@ Software
          The **Elvira** system is a Java tool to construct probabilistic models-driven based decision support systems. Elvira works with Bayesian networks and influence diagrams and it can operate with discrete, continuous and temporal variables. It has an easy to use Graphical User Interface (GUI).
 
 
-Consulting
+Consultancy
 =====================================
 
 
@@ -375,7 +375,7 @@ People
 
       .. container:: role
 
-         Assistant Professor
+         Associate Professor
 
 
 
