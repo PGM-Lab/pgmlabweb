@@ -18,8 +18,6 @@ PGM Lab
 Research
 =====================================
 
-
-
 .. container:: content-block
 
    .. container:: research-block
@@ -99,6 +97,9 @@ Research
 
          **Intelligent Systems** are systems with the capacity of learning and reasoning. Our research also focus on developing intelligent systems for problems coming from biology, genetics, information retrieval, crime prediction, drug discovery, autonomous driving, etc.
 
+.. raw:: html
+
+   <button type"button">Button</button>
 
 Facts and Figures
 =====================================
