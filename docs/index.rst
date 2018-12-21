@@ -99,7 +99,7 @@ Research
 
 .. raw:: html
 
-   <button type"button">Button</button>
+   <button class="button" type"button">More details</button>
 
 Facts and Figures
 =====================================
@@ -206,6 +206,9 @@ Education
 
 	   **PhD Program**: in our lab we offer fully funded PhD opportunities for talented students who want to go deeper in their data science and machine learning education.
 
+ .. raw:: html
+
+    <button class="button" type"button">More details</button>
 
 Software
 =====================================
@@ -273,6 +276,9 @@ Consultancy
 
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
+ .. raw:: html
+
+    <button class="button" type"button">More details</button>
 
 Success Stories
 =====================================

@@ -128,16 +128,17 @@ h1{
 */
 
 
-
 #research h1{
     text-align: left;
     margin-left:5%;
 }
 
-
-/*.content-block{
-   width:  100vw ;
- }*/
+#research button{
+  font-size: large;
+  background-color: #9AB2CD;
+  color: white;
+  font-weight: bold;
+}
 
 .research-block{
 /*	width: 90%;
@@ -230,6 +231,13 @@ h1{
 #education h1{
     text-align: left;
     padding-left: 5%;
+}
+
+#education button{
+  font-size: large;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
 }
 
 
@@ -413,6 +421,12 @@ vertical-align: middle;
     padding-left: 5%;
 }
 
+#consultancy button{
+  font-size: large;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+}
 
 .consultancy-block{
     width: 90%;
