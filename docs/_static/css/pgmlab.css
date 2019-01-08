@@ -133,7 +133,7 @@ h1{
     margin-left:5%;
 }
 
-#research button{
+#research .button{
   font-size: large;
   background-color: #9AB2CD;
   color: white;
@@ -213,7 +213,14 @@ h1{
 }
 
 
+/***************/
 
+#publications {
+    background-image: linear-gradient(to bottom, rgba(212,222,233,1), rgba(146,153,160,0.1));
+    padding-top: 1%;
+    padding-left: 2%;
+
+}
 
 /***************/
 
@@ -233,7 +240,7 @@ h1{
     padding-left: 5%;
 }
 
-#education button{
+#education .button{
   font-size: large;
   background-color: gray;
   color: white;
@@ -421,7 +428,7 @@ vertical-align: middle;
     padding-left: 5%;
 }
 
-#consultancy button{
+#consultancy .button{
   font-size: large;
   background-color: gray;
   color: white;
@@ -472,13 +479,14 @@ vertical-align: middle;
 
 
 #success-stories {
-    background-color: #9AB2CC;
+    background-color: #484F5F;
     padding-top: 30px;
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 50px;
     text-align: right;
     align-content: center;
+    color: white;
 }
 
 #success-stories h1{
@@ -686,12 +694,12 @@ vertical-align: middle;
 
 
 
-.generic-container {
+/*.generic-container {
     padding-top: 30px;
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 50px;
-}
+}*/
 
 .injected {
     visibility: hidden;

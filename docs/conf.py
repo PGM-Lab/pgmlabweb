@@ -114,7 +114,7 @@ html_theme_options = {
          ("Research", "./index.html#research", 1),
          ("Education", "./index.html#education", 1),
          ("Software", "./index.html#software", 1),
-         ("Consulting", "./index.html#consulting", 1), 
+         ("Consultancy", "./index.html#consultancy", 1), 
          ("People", "./index.html#people", 1), 
          ("Contact", "./index.html#contact", 1), 
      ],
