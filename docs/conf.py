@@ -102,6 +102,7 @@ html_theme_options = {
 
     # Tab name for the current pages TOC. (Default: "Page")
     #'navbar_pagenav_name': "",
+    
 
     # A list of tuples containing pages or urls to link to.
     # Valid tuples should be in the following forms:
@@ -112,22 +113,23 @@ html_theme_options = {
     # an arbitrary url.
      'navbar_links': [
          ("Research", "./index.html#research", 1),
-         ("Education", "./index.html#education", 1),
-         ("Software", "./index.html#software", 1),
-         ("Consultancy", "./index.html#consultancy", 1), 
-         ("People", "./index.html#people", 1), 
-         ("Contact", "./index.html#contact", 1), 
+            ("Publications", "./index.html#people", 1),
+                      #("Education", "./index.html#education", 1),
+                      #("Software", "./index.html#software", 1),
+                      #("Consultancy", "./index.html#consultancy", 1),
+                      #("People", "./index.html#people", 1),
+                      #("Contact", "./index.html#contact", 1),
      ],
      
          # Render the next and previous page links in navbar. (Default: true)
-    'navbar_sidebarrel': False,
+    'navbar_sidebarrel': True,
 
     # Render the current pages TOC in the navbar. (Default: true)
     'navbar_pagenav': False,
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
-    'globaltoc_depth': 0,
+    'globaltoc_depth': 2,
 
     # Include hidden TOCs in Site navbar?
     #

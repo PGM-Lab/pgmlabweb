@@ -13,7 +13,7 @@ Publications
 
 * Darío Ramos-López, Andrés R Masegosa, Antonio Salmerón, Rafael Rumí, Helge Langseth, Thomas D Nielsen, Anders L Madsen (2018). Scalable importance sampling estimation of Gaussian mixture posteriors in Bayesian networks. **International Journal of Approximate Reasoning**. Índice de impacto: 1,766. Posición: 65/132 (**Q2 in 2017**)
 
-* Rafael Cabañas, Andrés R Masegosa, Antonio Salmerón (2018). InferPy: Probabilistic modeling made easy. **Knowledge-Based Systems**. Índice de impacto: 4,396. Posición: 14/132 (**Q1 en 2017**)
+* Rafael Cabañas, Andrés R Masegosa, Antonio Salmerón (2018). InferPy: Probabilistic modeling made easy. **Knowledge-Based Systems**. Índice de impacto: 4,396. Posición: 14/132 (**Q1 in 2017**)
 
 * Antonio Salmerón, Rafael Rumí, Helge Langseth, Thomas D Nielsen, Anders L Madsen (2018). A review of inference algorithms for hybrid Bayesian networks. **Journal of Artificial Intelligence Research**, 62, 799-828. Índice de impacto: 1,257. Posición: 87/132 (**Q3 in 2017**)
 
