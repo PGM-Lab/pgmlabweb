@@ -113,12 +113,11 @@ html_theme_options = {
     # an arbitrary url.
      'navbar_links': [
          ("Research", "./index.html#research", 1),
-            ("Publications", "./index.html#people", 1),
-                      #("Education", "./index.html#education", 1),
-                      #("Software", "./index.html#software", 1),
-                      #("Consultancy", "./index.html#consultancy", 1),
-                      #("People", "./index.html#people", 1),
-                      #("Contact", "./index.html#contact", 1),
+         ("Education", "./index.html#education", 1),
+         ("Software", "./index.html#software", 1),
+         ("Consultancy", "./index.html#consultancy", 1),
+         ("People", "./index.html#people", 1),
+         ("Contact", "./index.html#contact", 1),
      ],
      
          # Render the next and previous page links in navbar. (Default: true)
