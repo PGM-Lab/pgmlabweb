@@ -97,3 +97,8 @@ Publications
 
 * Rafael Rumí, Antonio Salmerón (2007) Approximate probability propagation with mixtures of truncated exponentials. **International Journal of Approximate Reasoning** 45,191-210.Índice de impacto: 1.220. Posición: 38/93 (**Q2**)
 
+Projects
+==========================
+
+**Under Construction**
+

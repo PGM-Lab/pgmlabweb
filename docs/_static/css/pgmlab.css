@@ -224,6 +224,14 @@ h1{
 
 /***************/
 
+#projects {
+    background-image: linear-gradient(to bottom, rgba(212,222,233,1), rgba(146,153,160,0.1));
+    padding-top: 1%;
+    padding-left: 2%;
+}
+
+/***************/
+
 #education {
     background-color: #484F5F;
     padding-top: 20px;

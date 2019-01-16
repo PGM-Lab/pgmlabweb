@@ -1,0 +1,74 @@
+FROM ubuntu:18.04
+
+MAINTAINER Rafael Cabañas <rcabanas@ual.es>
+
+
+RUN apt-get update 
+
+# Install curl, git and gnupg packages
+RUN apt update && apt-get install -y gnupg
+RUN apt install -y curl git
+RUN apt install -y git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
+
+# Install the Node.js and Yarn core packages
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+
+RUN apt-get update
+RUN apt-get install -y nodejs yarn zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev
+
+# Get rbenv
+WORKDIR ~/
+RUN git clone https://github.com/rbenv/rbenv.git ~/.rbenv \
+&& echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc \
+&& echo 'eval "$(rbenv init -)"' >> ~/.bashrc \
+&& export PATH="$HOME/.rbenv/bin:$PATH" \
+&& exec $SHELL
+
+# Install the ruby-build plugin
+RUN git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build 
+RUN echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+RUN exec $SHELL 
+
+#RUN apt-get install -y rbenv ruby-build
+
+# Install Ruby
+RUN rbenv install 2.5.3
+RUN rbenv global 2.5.3
+
+RUN ruby -v
+
+RUN which ruby
+
+RUN which rbenv
+
+# Install bundler
+RUN gem install bundler
+RUN rbenv rehash
+
+
+# Install Rails
+RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+RUN apt-get install -y nodejs
+
+RUN gem install rails -v 5.2.1
+RUN rbenv rehash
+
+RUN rails -v
+
+#Install Jekyll
+RUN gem install jekyll
+
+
+
+
+
+
+
+    
+
+
+
+
+
