@@ -9,13 +9,12 @@ RUN gem install jekyll bundler
 RUN cd home
 
 # Clone the repository of the template
-RUN git clone https://github.com/altosaar/jaan.io.git
+RUN git clone https://github.com/PGM-Lab/pgmlabweb.git
 
-# Rename the repository folder  
-RUN mv jaan.io pgmlab 
+# Go to the template folder
+RUN cd pgmlaweb \\
+&& cd pgmlab_template
 
-# Set the path where is allocated the pgmlab website
-WORKDIR /home/pgmlab
 
 
 
