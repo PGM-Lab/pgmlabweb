@@ -1,0 +1,4 @@
+---
+1.0 jekyll:~> 3.1|checksum:86ce7209e5176c2e34455ffeb8f6c6eaf1d0441e06c2f53ec9f1969600aebb02,ruby:>= 2.1.0
+1.1.0 jekyll:~> 3.1|checksum:b1cf017271d81bcec6bde9dac7c1773592ca19e9c8b5128525c08fc35d665d05,ruby:>= 2.1.0
+1.2.0 jekyll:~> 3.1|checksum:d01168cab30d520dc597738f9da8eb5dd673dfd49ac2940eb06ee0b70cba403c,ruby:>= 2.1.0

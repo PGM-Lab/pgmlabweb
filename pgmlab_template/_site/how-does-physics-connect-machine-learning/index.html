@@ -1,0 +1,890 @@
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>How does physics connect to machine learning? &#8211; PGM-Lab </title>
+<meta name="description" content="Did Richard Feynman help seed a key machine learning technique in the 60s?">
+<meta name="keywords" content="physics, mean field methods, probabilistic models, probability models, ising models, exponential families, variational inference, autoencoder, neural networks, graphical models, inference, deep learning, machine learning">
+
+
+
+<head>
+
+<!-- Twitter Cards -->
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How does physics connect to machine learning? &#8211; PGM-Lab ">
+<meta property="og:description" content="Did Richard Feynman help seed a key machine learning technique in the 60s?">
+<meta property="og:url" content="http://localhost:4000/how-does-physics-connect-machine-learning/">
+<meta property="og:site_name" content="PGM-Lab ">
+<meta property="og:image" content="http://localhost:4000/images/physics-machine-learning-thumb.png">
+
+<!-- Google authorship -->
+<a rel="author" href="https://www.google.com/+JaanAltosaar"></a>
+
+<!-- Google & Bing Verification -->
+<meta name="google-site-verification" content="LTwvMh1s7cdUyjaHqQYsBg-I4ZPy0wm_TKUoU0IT5HU#LTwvMh1s7cdUyjaHqQYsBg-I4ZPy0wm_TKUoU0IT5HU">
+<meta name="msvalidate.01" content="B3B21CDB59D1FC75DFE9B0D0CC329C8C">
+</head>
+<link rel="canonical" href="http://localhost:4000/how-does-physics-connect-machine-learning/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Subscribe to the PGM-Lab Feed">
+
+
+
+<!-- old feed: <link href="http://localhost:4000/feed.xml" target="_blank" type="application/atom+xml" rel="alternate" title="Subscribe to the PGM-Lab RSS Feed"> -->
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Type -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" rel='stylesheet' type='text/css' />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
+<!-- <link rel="stylesheet" href="http://localhost:4000/assets/css/entypo.css" media="all"> -->
+<script async src="https://use.fontawesome.com/0a87e83674.js"></script>
+<!-- In order to use Calendas Plus, you must first purchase it. Then, create a font-face package using FontSquirrel.
+<link rel='stylesheet' href='http://localhost:4000/assets/cal.css' media='all' />
+-->
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/i.css">
+
+<!-- Fresh Squeezed jQuery -->
+<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+
+<script async src="http://localhost:4000/assets/js/auto-render.min.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<script async src="http://localhost:4000/assets/js/main.js"></script>
+
+<!-- Load Modernizr -->
+<script async src="http://localhost:4000/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+
+<div id="bump">
+  <body class="">
+    <header class="site-header darken">
+      <div class="wrap">
+        <hgroup>
+          <h1><a href="/"><span id="jaan" class="unhilighted">PGM-Lab</span>&nbsp;<span id="altosaar" class="hilighted"></span></a></h1>
+        </hgroup>
+        <a href="#nav" class="menu"><span class='icons'>☰</span></a>
+        
+        <nav role="navigation">
+          <ul>
+            <!--<li>
+              <a href="/" title="PGM-Lab">Home</a>
+            </li>-->
+            <ul>
+            
+            
+                
+                
+                <!--<li><a href="http://localhost:4000/about" >Research</a></li> -->
+                   
+                      <li class="dropdown ">
+                          <a href="/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Research <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                              
+                                  
+                                      <li>
+                                          <a href="/publications">Papers</a>
+                                      </li>
+                                  
+                              
+                                  
+                                      <li>
+                                          <a href="/talks">Projects</a>
+                                      </li>
+                                  
+                              
+                          </ul>
+                      </li>
+                  
+            
+                
+                
+                <!--<li><a href="http://localhost:4000/blog" >Education</a></li> -->
+                   
+                      <li class="">
+                          <a href="/blog">Education</a>
+                      </li>
+                  
+            
+                
+                
+                <!--<li><a href="http://localhost:4000/software" >Software</a></li> -->
+                   
+                      <li class="">
+                          <a href="/software">Software</a>
+                      </li>
+                  
+            
+                
+                
+                <!--<li><a href="http://localhost:4000/publications" >Consultancy</a></li> -->
+                   
+                      <li class="">
+                          <a href="/publications">Consultancy</a>
+                      </li>
+                  
+            
+                
+                
+                <!--<li><a href="http://localhost:4000/talks" >People</a></li> -->
+                   
+                      <li class="">
+                          <a href="/talks">People</a>
+                      </li>
+                  
+            
+                
+                
+                <!--<li><a href="http://localhost:4000/talks" >Contact</a></li> -->
+                   
+                      <li class="">
+                          <a href="/talks">Contact</a>
+                      </li>
+                  
+            
+
+          </ul>
+        </nav> 
+      </div>
+    </header>
+
+
+<section class="article">
+
+  <div class="overlay overlay-lighter"></div>
+  <div class="featured-image" style="background-image: url(http://localhost:4000/images/physics-machine-learning-figure.svg)"></div>
+
+
+      <article class="wrap post">
+        <header class="post-header">
+          <hgroup>
+            <h1><a href="/how-does-physics-connect-machine-learning/">How does physics connect to machine learning?</a></h1>
+            <br>
+            <!-- <p class="date">Published on <span class="date">Aug 11, 2017</span>&nbsp;|&nbsp;By <span itemprop="name" class="fn"><a href="http://localhost:4000/about" title="About " itemprop="url"></a></span> | <a href="/how-does-physics-connect-machine-learning/">Permalink</a></p> -->
+
+            <p class="intro">Did Richard Feynman help seed a key machine learning technique in the 60s?</p>
+          </hgroup>
+        </header>
+
+        <p>I struggled to learn machine learning. I was used to variational tricks, MCMC samplers, and discreet Taylor expansions from years of physics training. Now the concepts were mixed up. The intuitive models of physical systems were replaced by abstract models of ‘data’ and amechanical patterns of cause and effect.</p>
+
+<p>I had to fit these fields together. Physics and machine learning are intricately connected, but it is taking me years to make the overlaps precise. This process requires representing the new with the familiar, mapping jargon from one field to another.</p>
+
+<p>A simple model of magnets—the Ising model—will help illustrate the rich connection between these fields. We first analyze this model with physics intuition. Then we derive the variational principle in physics and show that it recovers the same solution.</p>
+
+<p>We then discover how that very same variational principle in physics opens a window into machine learning. We identify Boltzmann distributions as exponential families to make the mapping transparent, and show how approximate posterior inference is scaled to massive data thanks to the variational principle.</p>
+
+<p>If you have a physics background, I hope you will have a better sense of machine learning and be able to read papers in the field. If you are a machine learner, I hope you will have the context to read a statistical physics paper about mean-field theory and the Ising model.</p>
+
+<p><em>If this article is confusing, falls short of these goals, or could be improved in any way please <a href="mailto:altosaar@princeton.edu">email me</a>, <a href="https://twitter.com/thejaan">@ me</a>, or <a href="https://github.com/altosaar/jaan.io/blob/master/_posts/blog/2017-08-11-how-does-physics-connect-machine-learning.md">submit a pull request</a>.</em></p>
+
+<h3 id="the-ising-model-a-physics-perspective">The Ising model, a physics perspective</h3>
+
+<p>Consider a lattice of spins that point up or down:</p>
+
+<center>
+<figure>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 555.95477 431.12668" height="431.12668" width="555.95477" xml:space="preserve" id="svg2" version="1.1"><metadata id="metadata8"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs id="defs6"><clipPath id="clipPath14" clipPathUnits="userSpaceOnUse"><path id="path12" d="M 0,0 H 1024 V 768 H 0 Z" /></clipPath><clipPath id="clipPath24" clipPathUnits="userSpaceOnUse"><path id="path22" d="M 0,0 H 1024 V 768 H 0 Z" /></clipPath><clipPath id="clipPath206" clipPathUnits="userSpaceOnUse"><path id="path204" d="m 310.5266,509.9469 h 11.6 v 27.05315 h -11.6 z" /></clipPath><clipPath id="clipPath220" clipPathUnits="userSpaceOnUse"><path id="path218" d="m 491.0531,421.5 h 11.6 v 27.05315 h -11.6 z" /></clipPath><clipPath id="clipPath234" clipPathUnits="userSpaceOnUse"><path id="path232" d="m 400.5266,420.9468 h 11.6 v 27.05315 h -11.6 z" /></clipPath><clipPath id="clipPath248" clipPathUnits="userSpaceOnUse"><path id="path246" d="m 311.0532,421.5 h 11.6 v 27.05315 h -11.6 z" /></clipPath><clipPath id="clipPath262" clipPathUnits="userSpaceOnUse"><path id="path260" d="m 580.5266,420.0532 h 11.6 v 27.05315 h -11.6 z" /></clipPath><clipPath id="clipPath276" clipPathUnits="userSpaceOnUse"><path id="path274" d="m 581.2,509.9469 h 11.6 v 27.05315 h -11.6 z" /></clipPath><clipPath id="clipPath290" clipPathUnits="userSpaceOnUse"><path id="path288" d="m 400.5266,508.5 h 11.6 v 27.05315 h -11.6 z" /></clipPath><clipPath id="clipPath304" clipPathUnits="userSpaceOnUse"><path id="path302" d="m 491.2,509.9469 h 11.6 v 27.05315 h -11.6 z" /></clipPath><clipPath id="clipPath318" clipPathUnits="userSpaceOnUse"><path id="path316" d="m 310.5266,598.9469 h 11.6 v 27.05315 h -11.6 z" /></clipPath><clipPath id="clipPath332" clipPathUnits="userSpaceOnUse"><path id="path330" d="m 581.2,598.9469 h 11.6 v 27.05315 h -11.6 z" /></clipPath><clipPath id="clipPath346" clipPathUnits="userSpaceOnUse"><path id="path344" d="m 400.5266,597.5 h 11.6 v 27.05315 h -11.6 z" /></clipPath><clipPath id="clipPath360" clipPathUnits="userSpaceOnUse"><path id="path358" d="m 491.2,598.9469 h 11.6 v 27.05315 h -11.6 z" /></clipPath></defs><g clip-path="url(#clipPath14)" transform="matrix(1.3333333,0,0,-1.3333333,-324.15533,911.374)" id="g10"><g id="g16" /><g id="g18"><g clip-path="url(#clipPath24)" id="g20"><path id="path26" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 H 1024 V 768 H 0 Z" /><g transform="matrix(0,1,1,0,316.3266,456)" id="g28"><path id="path30" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,294.8,456)" id="g32"><path id="path34" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,249.3266,434.4734)" id="g36"><path id="path38" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,315.8,369)" id="g40"><path id="path42" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,406.3266,456)" id="g44"><path id="path46" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,384.8,456)" id="g48"><path id="path50" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,339.3266,434.4734)" id="g52"><path id="path54" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,405.8,369)" id="g56"><path id="path58" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,496.3266,456)" id="g60"><path id="path62" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,474.8,456)" id="g64"><path id="path66" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,429.3266,434.4734)" id="g68"><path id="path70" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,495.8,369)" id="g72"><path id="path74" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,586.3266,456)" id="g76"><path id="path78" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,564.8,456)" id="g80"><path id="path82" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,519.3265,434.4734)" id="g84"><path id="path86" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,585.8,369)" id="g88"><path id="path90" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,609.3265,434.4734)" id="g92"><path id="path94" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,316.3266,545)" id="g96"><path id="path98" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,294.8,545)" id="g100"><path id="path102" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,249.3266,523.4734)" id="g104"><path id="path106" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,406.3266,545)" id="g108"><path id="path110" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,384.8,545)" id="g112"><path id="path114" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,339.3266,523.4734)" id="g116"><path id="path118" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,496.3266,545)" id="g120"><path id="path122" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,474.8,545)" id="g124"><path id="path126" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,429.3266,523.4734)" id="g128"><path id="path130" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,586.3266,545)" id="g132"><path id="path134" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,564.8,545)" id="g136"><path id="path138" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,519.3265,523.4734)" id="g140"><path id="path142" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,609.3265,523.4734)" id="g144"><path id="path146" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,316.3266,634)" id="g148"><path id="path150" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,294.8,634)" id="g152"><path id="path154" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,249.3266,612.4734)" id="g156"><path id="path158" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,406.3266,634)" id="g160"><path id="path162" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,384.8,634)" id="g164"><path id="path166" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,339.3266,612.4734)" id="g168"><path id="path170" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,496.3266,634)" id="g172"><path id="path174" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,474.8,634)" id="g176"><path id="path178" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,429.3266,612.4734)" id="g180"><path id="path182" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,586.3266,634)" id="g184"><path id="path186" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,564.8,634)" id="g188"><path id="path190" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,519.3265,612.4734)" id="g192"><path id="path194" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,609.3265,612.4734)" id="g196"><path id="path198" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g></g></g><g id="g200"><g clip-path="url(#clipPath206)" id="g202"><g transform="matrix(0,-1,-1,0,316.3266,536)" id="g208"><path id="path210" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 0,0 h 15.45315 1" /></g><path id="path212" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 311.5266,520.5469 4.8,-9.6 4.8,9.6 z" /></g></g><g id="g214"><g clip-path="url(#clipPath220)" id="g216"><g transform="matrix(0,-1,-1,0,496.8531,447.5532)" id="g222"><path id="path224" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 0,0 h 15.45315 1" /></g><path id="path226" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 492.0531,432.1 4.8,-9.6 4.8,9.6 z" /></g></g><g id="g228"><g clip-path="url(#clipPath234)" id="g230"><g transform="matrix(0,1,1,0,406.3266,421.9468)" id="g236"><path id="path238" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 0,0 h 15.45315 1" /></g><path id="path240" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 411.1266,437.4 -4.8,9.6 -4.8,-9.6 z" /></g></g><g id="g242"><g clip-path="url(#clipPath248)" id="g244"><g transform="matrix(0,1,1,0,316.8532,422.5)" id="g250"><path id="path252" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 0,0 h 15.45315 1" /></g><path id="path254" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 321.6532,437.9532 -4.8,9.6 -4.8,-9.6 z" /></g></g><g id="g256"><g clip-path="url(#clipPath262)" id="g258"><g transform="matrix(0,1,1,0,586.3266,421.0532)" id="g264"><path id="path266" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 0,0 h 15.45315 1" /></g><path id="path268" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 591.1266,436.5063 -4.8,9.6 -4.8,-9.6 z" /></g></g><g id="g270"><g clip-path="url(#clipPath276)" id="g272"><g transform="matrix(0,-1,-1,0,587,536)" id="g278"><path id="path280" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 0,0 h 15.45315 1" /></g><path id="path282" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 582.2,520.5469 4.8,-9.6 4.8,9.6 z" /></g></g><g id="g284"><g clip-path="url(#clipPath290)" id="g286"><g transform="matrix(0,1,1,0,406.3266,509.5)" id="g292"><path id="path294" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 0,0 h 15.45315 1" /></g><path id="path296" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 411.1266,524.9532 -4.8,9.6 -4.8,-9.6 z" /></g></g><g id="g298"><g clip-path="url(#clipPath304)" id="g300"><g transform="matrix(0,1,1,0,497,510.9469)" id="g306"><path id="path308" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 0,0 h 15.45315 1" /></g><path id="path310" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 501.8,526.4 -4.8,9.6 -4.8,-9.6 z" /></g></g><g id="g312"><g clip-path="url(#clipPath318)" id="g314"><g transform="matrix(0,-1,-1,0,316.3266,625)" id="g320"><path id="path322" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 0,0 h 15.45315 1" /></g><path id="path324" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 311.5266,609.5469 4.8,-9.6 4.8,9.6 z" /></g></g><g id="g326"><g clip-path="url(#clipPath332)" id="g328"><g transform="matrix(0,-1,-1,0,587,625)" id="g334"><path id="path336" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 0,0 h 15.45315 1" /></g><path id="path338" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 582.2,609.5469 4.8,-9.6 4.8,9.6 z" /></g></g><g id="g340"><g clip-path="url(#clipPath346)" id="g342"><g transform="matrix(0,1,1,0,406.3266,598.5)" id="g348"><path id="path350" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 0,0 h 15.45315 1" /></g><path id="path352" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 411.1266,613.9532 -4.8,9.6 -4.8,-9.6 z" /></g></g><g id="g354"><g clip-path="url(#clipPath360)" id="g356"><g transform="matrix(0,1,1,0,497,599.9469)" id="g362"><path id="path364" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 0,0 h 15.45315 1" /></g><path id="path366" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 501.8,615.4 -4.8,9.6 -4.8,-9.6 z" /></g></g></g></svg>
+</figure>
+</center>
+
+<p>What features might make this a convincing model of magnetism?</p>
+
+<p>Think about playing with magnets—if you put them close together, they pull each other closer. They repulse each other when their poles oppose, and if they’re far apart, they don’t attract.</p>
+
+<p>This means neighboring spins should affect each other in our model: if the spins around <script type="math/tex">s_i</script> point upward, it should also want to point upward.</p>
+
+<p>Let’s refer to the spin at location <script type="math/tex">i</script> as <script type="math/tex">s_i</script>. A spin can be in one of two <strong>states</strong>: a spin can point up (<script type="math/tex">s_i=+1</script>) or down (<script type="math/tex">s_i=-1</script>).</p>
+
+<p>We can capture our intuition about spins being attracted to each other (they want to point in the same direction) or repulsed (they want to point in opposite directions) by introducing a parameter <script type="math/tex">J</script>. This interaction parameter captures the <strong>interaction strength</strong> between spin <script type="math/tex">i</script> and spin <script type="math/tex">j</script>.</p>
+
+<p>If two neighboring spins point in the same direction, we’ll have them contribute a term <script type="math/tex">-J</script> to the total energy; if they point in opposing directions, they will contribute <script type="math/tex">J</script>.</p>
+
+<p>This lets us write the <strong>energy function</strong>, or Hamiltonian, of the system:</p>
+
+<script type="math/tex; mode=display">E(s_1, s_2,...,s_N) = -\frac{1}{2}\sum_{i=1}^N\sum_{j=1}^NJ_{ij} s_i s_j</script>
+
+<p>Here <script type="math/tex">J_{ij} = J</script> if spins <script type="math/tex">i</script> and <script type="math/tex">j</script> are neighbors, and <script type="math/tex">J_{ij} = 0</script> otherwise. The factor of <script type="math/tex">\frac{1}{2}</script> in front is to account for double counting from the sums over both <script type="math/tex">i</script> and <script type="math/tex">j</script>. Note that the system has finitely many spins (<script type="math/tex">N</script> spins).</p>
+
+<p>A spin <strong>configuration</strong> or state of the system is a specific setting of values for all spins. The set <script type="math/tex">\{s_1=+1, s_2=+1, s_3=-1, ..., s_N=+1\}</script> is an example of a configuration.</p>
+
+<p>The second law of thermodynamics says that at a fixed temperature and entropy, a system will seek configurations that minimize its energy. This lets us reason about interactions.</p>
+
+<p>If the interaction strength <script type="math/tex">J</script> is zero, the spins do not interact and the system has the same energy, zero, for all configurations (i.e. the energy is trivially minimized). But if the interaction strength <script type="math/tex">J</script> is positive, the spins will tend to align to minimize the energy of the system <script type="math/tex">E(s_1, s_2,...,s_N)</script>. This corresponds to minimization because of the minus sign convention in front of the sum in the energy function.</p>
+
+<p>Now let’s introduce a <strong>magnetic field</strong> <script type="math/tex">H</script>. Imagine the lattice of spins immersed in a magnetic field, perhaps the ambient field from the earth’s crust. The magnetic field affects every spin independently, and each spin will try to align with the field. We can include the magnetic field in the energy of the system by summing the independent contributions for each spin:</p>
+
+<script type="math/tex; mode=display">E(s_1, s_2,...,s_N) = -\frac{1}{2}\sum_{i, j} J_{ij}s_i s_j - H\sum_i s_i</script>
+
+<p>We can reason about the magnetic field strength <script type="math/tex">H</script> by imagining what happens if it is large or small (strong or weak). If <script type="math/tex">H</script> is large and the interactions between spins are weak, the magnetic field term will dominate and the spins will align with the magnetic field to minimize energy. But if the magnetic field is small, it is more difficult to reason about.</p>
+
+<p>Now that we have defined the Ising model and its characteristics, let’s think about our goals. What questions can we answer about this Ising model? For example, if we observe the system, what state will it be in—what are the most likely spin configurations? What is the average magnetization?</p>
+
+<h3 id="the-boltzmann-distribution">The Boltzmann distribution</h3>
+
+<p>Can we make our goals more precise and make math from words? To do this, we need to define a distribution over spin configurations. It is straightforward to derive the probability of finding the system in an equilibrium state <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>:</p>
+
+<script type="math/tex; mode=display">p(s_1, s_2,...,s_N) = \frac{e^{-\beta E(s_1, s_2,...,s_N)}}{Z}</script>
+
+<p>This is the <strong>Boltzmann distribution</strong>. The numerator is called the Boltzmann factor for a particular configuration. This factor gives high or low weight to a specific state of the system according to the energy for that state.</p>
+
+<p>We query the Boltzmann distribution at a specific configuration of spins to get the probability of finding the system in this state.</p>
+
+<p>For example, say the first spins in our configuration happen to be up, up, down, etc. We plug this in and get  <script type="math/tex">p(s_1=+1, s_2=+1, s_3=-1,...,s_N=+1)=0.7321</script>. This means this state was pretty likely.</p>
+
+<p>This distribution behaves intuitively: low energy states are more probable than configurations with high energy. For example, if <script type="math/tex">J=+1</script>, the spins will align, and the state where all spins point in the same direction is most probable. Why? Because it leads to the most negative energy function, which corresponds to the Boltzmann factor with the largest weight.</p>
+
+<p>The parameter <script type="math/tex">\beta</script> is proportional to the inverse temperature, <script type="math/tex">\beta = \frac{1}{k_BT}</script> and is used for notational convenience. (Specifically, it includes the constant <script type="math/tex">k_B</script> to make the probability density dimensionless.) Temperature affects the model by controlling how important the interactions are. If <script type="math/tex">T\rightarrow \infty</script> we are at a high temperature, and the inverse temperature is small with <script type="math/tex">\beta \ll 1</script>, so the interaction strength <script type="math/tex">J</script> is not important. But at low temperatures, the inverse temperature is small and <script type="math/tex">J</script> divided by a small number is big, so interactions have a large effect on the system’s behavior.</p>
+
+<h3 id="the-partition-function">The partition function</h3>
+
+<p>The denominator <script type="math/tex">Z</script> is of utmost importance. It ensures that the distribution integrates to <script type="math/tex">1</script> and is thus a valid probability distribution. We need this normalization to calculate properties of the system. Calculating mean values and other moments can only be done with a probability mass function. The name of <script type="math/tex">Z</script> is “<strong>partition function</strong>” or “normalizing constant”. It is the sum of each state’s Boltzmann factor:</p>
+
+<script type="math/tex; mode=display">Z = \sum_{s_1=\pm1}\sum_{s_2=\pm1}...\sum_{s_N=\pm1}e^{-\beta E(s_1, s_2, ..., s_N)}</script>
+
+<p>I explicitly wrote out the sum to illustrate why we can’t evaluate this distribution: we need to sum over all possible configurations. Each spin has two states, and there are <script type="math/tex">N</script> spins. This leads to <script type="math/tex">2^N</script> terms in the sum. For a small system with a hundred spins, this is already greater than the number of atoms in the universe so we can never hope to calculate it <sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.</p>
+
+<h3 id="using-the-boltzmann-distribution-to-calculate-properties-of-the-system">Using the Boltzmann distribution to calculate properties of the system</h3>
+
+<p>We arrived at a probability distribution describing which states of the system are likely, however we were stumped by the intractable partition function. Let’s temporarily assume we have infinite computation and <em>can</em> calculate the Boltzmann distribution’s partition function. What are some interesting things we can learn about the system from it’s Boltzmann distribution?</p>
+
+<p>This distribution lets us to calculate properties of the system as a whole by taking <strong>expectations</strong> (i.e. calculating observable quantities). For example, the magnetization <script type="math/tex">m</script> is the average magnetization over all spins:</p>
+
+<script type="math/tex; mode=display">m = \frac{1}{N} \langle  s_1 + s_1 + ... + s_N \rangle = \langle  s_i \rangle</script>
+
+<p>Why should we care about this magnetization? It tells us about the system as a whole, the macrostate, rather than a specific microstate. We lose specificity because we can’t say anything about the first spin <script type="math/tex">s_1</script>, but we learn about how it behaves across all possible states of the rest of the spins.</p>
+
+<p>If the spins are aligned, the system is in an ordered state and the magnetization has a positive or negative sign. If the spins are anti-aligned, the system is disordered and the average magnetization is zero.</p>
+
+<p>These are global <strong>phases</strong> of the system, and they depend on temperature. If the temperature <script type="math/tex">T</script> goes to infinity, the inverse temperature <script type="math/tex">\beta</script> goes to zero, and all states of the system are equally likely, as described by the Boltzmann distribution. But if the temperature is finite, then some states are more likely than others, and the system can transition between ordered and disordered phases. Such <strong>phase transitions</strong> and how they depend on the temperature are important for comparing how well this Ising model matches real-world materials <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.</p>
+
+<p>Let’s remember that we can’t evaluate the partition function <script type="math/tex">Z</script>. This situation seems hopeless for answering interesting questions like calculating the magnetization. But thankfully, we may be able to simplify the problem by considering each spin independently and figuring out an approximation…</p>
+
+<h3 id="mean-field-theory-in-physics">Mean-field theory in physics</h3>
+
+<p>Because we cannot evaluate the intractable sum required to calculate the partition function, we turn to <strong>mean-field theory</strong>.</p>
+
+<p>This is an approximation technique that can still let us answer questions about the system such as the average magnetization. We will study the dependence of the magnetization <script type="math/tex">m</script> on temperature.</p>
+
+<p>To demonstrate the technique, it is easiest to focus on a single spin:</p>
+
+<center>
+<figure>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 318.76706 312.94681" height="312.94681" width="318.76706" xml:space="preserve" id="svg2" version="1.1"><metadata id="metadata8"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs id="defs6"><clipPath id="clipPath14" clipPathUnits="userSpaceOnUse"><path id="path12" d="M 0,0 H 1024 V 768 H 0 Z" /></clipPath><clipPath id="clipPath24" clipPathUnits="userSpaceOnUse"><path id="path22" d="M 0,0 H 1024 V 768 H 0 Z" /></clipPath><clipPath id="clipPath130" clipPathUnits="userSpaceOnUse"><path id="path128" d="M 0,0 H 1024 V 768 H 0 Z" /></clipPath><clipPath id="clipPath136" clipPathUnits="userSpaceOnUse"><path id="path134" d="m 448,474 h 96 v 99 h -96 z" /></clipPath><clipPath id="clipPath140" clipPathUnits="userSpaceOnUse"><path id="path138" d="m 448,474 h 96 v 99 h -96 z" /></clipPath><mask id="mask142" height="1" width="1" y="0" x="0" maskUnits="userSpaceOnUse"><image id="image144" xlink:href="data:image/png;base64,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" preserveAspectRatio="none" height="1" width="1" /></mask><clipPath id="clipPath170" clipPathUnits="userSpaceOnUse"><path id="path168" d="M 0,0 H 1024 V 768 H 0 Z" /></clipPath><clipPath id="clipPath176" clipPathUnits="userSpaceOnUse"><path id="path174" d="M 433,458 H 561 V 589 H 433 Z" /></clipPath><clipPath id="clipPath180" clipPathUnits="userSpaceOnUse"><path id="path178" d="M 433,458 H 561 V 589 H 433 Z" /></clipPath><mask id="mask182" height="1" width="1" y="0" x="0" maskUnits="userSpaceOnUse"><image id="image184" xlink:href="data:image/png;base64,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" preserveAspectRatio="none" height="1" width="1" /></mask></defs><g clip-path="url(#clipPath14)" transform="matrix(1.3333333,0,0,-1.3333333,-503.338,851.59987)" id="g10"><g id="g16" /><g id="g18"><g clip-path="url(#clipPath24)" id="g20"><path id="path26" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 H 1024 V 768 H 0 Z" /><g transform="matrix(0,1,1,0,496.3266,456)" id="g28"><path id="path30" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,474.8,456)" id="g32"><path id="path34" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,384.8,545)" id="g36"><path id="path38" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(0,1,1,0,496.3266,545)" id="g40"><path id="path42" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,474.8,545)" id="g44"><path id="path46" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,429.3266,523.4734)" id="g48"><path id="path50" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,564.8,545)" id="g52"><path id="path54" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,519.3265,523.4734)" id="g56"><path id="path58" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,474.8,634)" id="g60"><path id="path62" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="translate(483,513)" id="g64"><text id="text68" style="font-variant:normal;font-weight:300;font-size:36px;font-family:Helvetica;-inkscape-font-specification:Helvetica-Light;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="scale(1,-1)"><tspan id="tspan66" y="0" x="0">s</tspan></text>
+</g><g transform="translate(483,513)" id="g70"><text id="text74" style="font-variant:normal;font-weight:300;font-size:16px;font-family:Helvetica;-inkscape-font-specification:Helvetica-Light;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1,0,0,-1,18,-1.839966)"><tspan id="tspan72" y="0" x="0">1</tspan></text>
+</g><g transform="translate(483,602)" id="g76"><text id="text80" style="font-variant:normal;font-weight:300;font-size:36px;font-family:Helvetica;-inkscape-font-specification:Helvetica-Light;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="scale(1,-1)"><tspan id="tspan78" y="0" x="0">s</tspan></text>
+</g><g transform="translate(483,602)" id="g82"><text id="text86" style="font-variant:normal;font-weight:300;font-size:16px;font-family:Helvetica;-inkscape-font-specification:Helvetica-Light;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1,0,0,-1,18,-1.839966)"><tspan id="tspan84" y="0" x="0">3</tspan></text>
+</g><g transform="translate(573,513)" id="g88"><text id="text92" style="font-variant:normal;font-weight:300;font-size:36px;font-family:Helvetica;-inkscape-font-specification:Helvetica-Light;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="scale(1,-1)"><tspan id="tspan90" y="0" x="0">s</tspan></text>
+</g><g transform="translate(573,513)" id="g94"><text id="text98" style="font-variant:normal;font-weight:300;font-size:16px;font-family:Helvetica;-inkscape-font-specification:Helvetica-Light;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1,0,0,-1,18,-1.839966)"><tspan id="tspan96" y="0" x="0">2</tspan></text>
+</g><g transform="translate(392,513)" id="g100"><text id="text104" style="font-variant:normal;font-weight:300;font-size:36px;font-family:Helvetica;-inkscape-font-specification:Helvetica-Light;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="scale(1,-1)"><tspan id="tspan102" y="0" x="0">s</tspan></text>
+</g><g transform="translate(392,513)" id="g106"><text id="text110" style="font-variant:normal;font-weight:300;font-size:16px;font-family:Helvetica;-inkscape-font-specification:Helvetica-Light;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1,0,0,-1,18,-1.839966)"><tspan id="tspan108" y="0" x="0">4</tspan></text>
+</g><g transform="translate(483,424)" id="g112"><text id="text116" style="font-variant:normal;font-weight:300;font-size:36px;font-family:Helvetica;-inkscape-font-specification:Helvetica-Light;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="scale(1,-1)"><tspan id="tspan114" y="0" x="0">s</tspan></text>
+</g><g transform="translate(483,424)" id="g118"><text id="text122" style="font-variant:normal;font-weight:300;font-size:16px;font-family:Helvetica;-inkscape-font-specification:Helvetica-Light;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1,0,0,-1,18,-1.839966)"><tspan id="tspan120" y="0" x="0">5</tspan></text>
+</g></g></g><g id="g124"><g clip-path="url(#clipPath130)" id="g126"><g id="g132" /><g id="g162"><g style="opacity:0.70679997" id="g160" clip-path="url(#clipPath136)"><g id="g146" /><g id="g158"><g id="g156" clip-path="url(#clipPath140)"><g id="g150" transform="matrix(93.30093,0,0,93.30093,449.6761,474.823)"><image id="image148" mask="url(#mask142)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAABdCAYAAADHcWrDAAAABHNCSVQICAgIfAhkiAAAAONJREFUeJzt0EERACAMwLCBf8/ggj5IFPS6ZuYMT+064EemB0wPmB4wPWB6wPSA6QHTA6YHTA+YHjA9YHrA9IDpAdMDpgdMD5geMD1gesD0gOkB0wOmB0wPmB4wPWB6wPSA6QHTA6YHTA+YHjA9YHrA9IDpAdMDpgdMD5geMD1gesD0gOkB0wOmB0wPmB4wPWB6wPSA6QHTA6YHTA+YHjA9YHrA9IDpAdMDpgdMD5geMD1gesD0gOkB0wOmB0wPmB4wPWB6wPSA6QHTA6YHTA+YHjA9YHrA9IDpAdMDpgdMD5geuMGpAbkEyR5aAAAAAElFTkSuQmCC" transform="matrix(1,0,0,-1,0,1)" preserveAspectRatio="none" height="1" width="1" /></g><g id="g154" transform="matrix(1,0,0,-1,453.1761,566.6239)"><path id="path152" style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1" d="m 73.66245,12.63848 c 16.85131,16.8513 16.85131,44.17267 0,61.02397 -16.8513,16.85131 -44.17267,16.85131 -61.02397,0 -16.851306,-16.8513 -16.851306,-44.17267 0,-61.02397 16.8513,-16.851306 44.17267,-16.851306 61.02397,0 z" /></g></g></g></g></g></g></g><g id="g164"><g clip-path="url(#clipPath170)" id="g166"><g id="g172" /><g id="g202"><g style="opacity:0.66519997" id="g200" clip-path="url(#clipPath176)"><g id="g186" /><g id="g198"><g id="g196" clip-path="url(#clipPath180)"><g id="g190" transform="matrix(124.755,0,0,124.755,434.4756,459.0959)"><image id="image188" mask="url(#mask182)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAB9CAYAAACPgGwlAAAABHNCSVQICAgIfAhkiAAAATdJREFUeJzt0UENACAQwLAD/57BBTzWKliyNTNnSNm/A3jP9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPMj3I9CDTg0wPuiT1AfnKKjQ8AAAAAElFTkSuQmCC" transform="matrix(1,0,0,-1,0,1)" preserveAspectRatio="none" height="1" width="1" /></g><g id="g194" transform="matrix(1,0,0,-1,437.9756,582.3509)"><path id="path192" style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6, 6;stroke-dashoffset:0;stroke-opacity:1" d="m 100.5102,17.24482 c 22.9931,22.9931 22.9931,60.27228 0,83.26538 -22.9931,22.9931 -60.27228,22.9931 -83.26538,0 -22.993094,-22.9931 -22.993094,-60.27228 0,-83.26538 22.9931,-22.993094 60.27228,-22.993094 83.26538,0 z" /></g></g></g></g></g><g transform="translate(533,554)" id="g204"><text id="text208" style="font-variant:normal;font-weight:300;font-size:36px;font-family:Helvetica;-inkscape-font-specification:Helvetica-Light;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="scale(1,-1)"><tspan id="tspan206" y="0" x="0">H</tspan></text>
+</g></g></g></g></svg>
+<figcaption>The first spin of the Ising model in a magnetic field H. The magnetic field is shown with dashed lines. Its nearest neighbors provide an effective field through the interactions, denoted by lines connecting the spins.</figcaption>
+</figure>
+</center>
+
+<p>The contribution of this single spin to the total energy of the system is simply the corresponding term in the energy:</p>
+
+<script type="math/tex; mode=display">E_{s_1} = -s_1\left(J\sum_{j=2}^z+1 s_j + H\right)</script>
+
+<p>The sum is over the <script type="math/tex">z</script> nearest neighbors. For the two-dimensional lattice we are considering, <script type="math/tex">z = 4</script>. We can rewrite this energy for a single spin in terms of the fluctuations of a spin <script type="math/tex">s_j</script> around its mean value <script type="math/tex">m = \langle  s_j \rangle</script>. Replacing <script type="math/tex">s_j = m + (s_j - m)</script> gives</p>
+
+<script type="math/tex; mode=display">E_{s_1}= -s_1(zJm + H) -J s_1 \sum_{j=2}^z+1 (s_j - m)</script>
+
+<p>The next step is crucial: we will ignore the fluctuations of neighboring spins around their mean value. In other words, we assume that the term <script type="math/tex">(s_j - m) \rightarrow 0</script>, so that each of the neighbors of <script type="math/tex">s_1</script> is simply equal to its mean value, <script type="math/tex">s_j = m</script>.</p>
+
+<p>When is this true?</p>
+
+<p>When the fluctuations around the mean value are small, such as at low temperature ‘ordered’ phases. This assumption greatly simplifies the Hamiltonian for the spin:</p>
+
+<script type="math/tex; mode=display">E_{s_1}^{MF} = -s_1 (zJm + H).</script>
+
+<p>This is the mean-field energy function for a single spin. It is equivalent to a non-interacting spin in an <em>effective</em> magnetic field, <script type="math/tex">H^{eff}=zJm + H</script>.</p>
+
+<p>Why do we say this spin is non-interacting? The energy function for the spin only depends on its state, <script type="math/tex">s_1</script>, and does not depend on the state of any other spins. We have approximated the interaction effects by the average magnetic field induced by the neighboring spins; this is the <strong>mean field</strong>.</p>
+
+<p>In this mean-field model, each spin feels the effects of the magnetic field applied to the entire system, <script type="math/tex">H</script>, as well as the ‘effective’ mean field from its neighboring spins <script type="math/tex">zJm</script>.</p>
+
+<p>We clarify this interpretation by writing</p>
+
+<script type="math/tex; mode=display">H\leftarrow H + \Delta H</script>
+
+<p>where <script type="math/tex">\Delta H = zJm</script> is the the average magnetic field (‘mean field’) of the neighbors of each spin.</p>
+
+<p>By ignoring the fluctuations of each spin, we have reduced the complexity of the problem. Instead of <script type="math/tex">N</script> interacting spins, we have <script type="math/tex">N</script> <em>independent</em> spins in a uniform magnetic field <script type="math/tex">H</script> with a small correction <script type="math/tex">\Delta H</script> to account for the effects of interactions.</p>
+
+<p>We write the energy function for the mean-field model as</p>
+
+<script type="math/tex; mode=display">E_{MF}(s_1, s_2,...,s_{N}) = -(H+\Delta H)\sum_{i=1}^Ns_i.</script>
+
+<p>This shows that there are no interaction terms anymore (the term <script type="math/tex">s_is_j</script> doesn’t occur in the energy).</p>
+
+<p>In other words, we can treat each spin independently, then combine the results appropriately to model the entire system!</p>
+
+<p>We have radically changed the nature of the problem.</p>
+
+<p>Instead of computing the partition function <script type="math/tex">Z</script> for the whole system, we can now compute it <em>for a single spin.</em></p>
+
+<p>This is straightforward and has an analytic solution <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>:</p>
+
+<script type="math/tex; mode=display">Z_{s_1} = \sum_{s_i = \pm 1} e^{-\beta s_i(H+\Delta H)}</script>
+
+<script type="math/tex; mode=display">\Rightarrow Z_{s_1} = 2\cosh{[\beta(H+\Delta H)]}</script>
+
+<p>The partition function for the entire mean-field model with <script type="math/tex">N</script> spins is then</p>
+
+<script type="math/tex; mode=display">Z_{MF} = (2\cosh{[\beta(H+\Delta H)]} )^N.</script>
+
+<p>With the partition function in hand, we can get the Boltzmann distribution and answer questions about the system such as magnetization.</p>
+
+<p>We get the magnetization by taking an expectation over the distribution for the spin. The last step is to require that for any spin <script type="math/tex">i</script>, its average magnetization should equal the magnetization of the system as a whole:</p>
+
+<script type="math/tex; mode=display">m = \sum_{s_i=\pm 1} p(s_i) s_i</script>
+
+<script type="math/tex; mode=display">\Rightarrow m =\tanh{[\beta({H + \Delta H})]}</script>
+
+<p>This gives us a clean equation for the magnetization,</p>
+
+<script type="math/tex; mode=display">m = \tanh{[\beta(H + zJm)]},</script>
+
+<p>where we used that the mean-field parameter is <script type="math/tex">\Delta H = zJm</script>.</p>
+
+<p>This is a formula for the magnetization <script type="math/tex">m</script> as a function of temperature. It has no closed form solution, but we can plot both sides of the equation and see where they intersect to find the implicit solutions (drag the slider to re-plot at a new temperature):</p>
+
+<iframe width="100%" height="800" frameborder="0" scrolling="no" src="/files/ising_model_magnetization.html"></iframe>
+
+<p>First let’s think about the case when there is no external field, <script type="math/tex">H = 0</script>.</p>
+
+<p>For high temperatures, the equation only has one solution: <script type="math/tex">m = 0</script>. This aligns with our intuition—if we look at the energy of the system, the inverse temperature <script type="math/tex">\beta</script> goes to zero and all states of the spins are equally likely. They average out to zero.</p>
+
+<p>For low temperatures, we see three solutions: <script type="math/tex">m=0</script> and <script type="math/tex">m= \pm \lvert m\lvert</script>. The additional <script type="math/tex">\pm</script> solutions appear when the slope of the <script type="math/tex">\tanh</script> function at the origin is greater than one:</p>
+
+<script type="math/tex; mode=display">\frac{d}{dm} \tanh{[\beta zJm]} |_{m=0} > 1</script>
+
+<script type="math/tex; mode=display">\Rightarrow  \beta zJ > 1</script>
+
+<p>The “critical temperature” at which the phase transition occurs is when <script type="math/tex">\beta zJ = \frac{1}{k_B T} zJ = 1</script>, or when <script type="math/tex">k_B T_c = zJ</script>.</p>
+
+<p>This gives us a testable prediction: we can take a magnetic material, and measure what temperature its phase transition occurs at.</p>
+
+<p>Have we accomplished our goal?</p>
+
+<p>We set out to understand the behavior of this model at various temperatures, in terms of global properties like the magnetization.</p>
+
+<p>By considering a single spin and approximating the effects of other spins as an effective magnetic field, we were able to reduce the complexity of the problem. This allowed us to study phase transitions. However, our exposition felt a little hand-wavy, so let’s dive into a rigorous foundation to justify our intuitions.</p>
+
+<h3 id="deriving-the-variational-free-energy-principle-the-gibbs-bogoliubov-feynman-inequality">Deriving the variational free energy principle: the Gibbs-Bogoliubov-Feynman inequality</h3>
+
+<p>Can we learn what tradeoffs we make when we make the assumption of ‘ignoring fluctuations’ of spins around their mean values? Specifically, how can we gauge the quality of results derived from our mean-field theory?</p>
+
+<p>We can rederive the mean-field results in the previous section by directly attacking the problem of the intractable partition function. We can try to approximate this partition function with a simpler one.</p>
+
+<p>Recall that the partition function <script type="math/tex">Z</script> for the system is</p>
+
+<script type="math/tex; mode=display">Z = \sum_{s_1, s_2, ..., s_N}e^{-\beta E(s_1, s_2,...,s_N)}</script>
+
+<p>where as before, the energy for the system is</p>
+
+<script type="math/tex; mode=display">E(s_1, s_2,...,s_N) = -\frac{1}{2}\sum_{i, j} J_{ij}s_i s_j - H\sum_i s_i.</script>
+
+<p>The complexity of computing the partition function comes from the interaction term with <script type="math/tex">s_is_j</script>. We saw that without this term, we were able to reduce the problem to dealing with a system of independent spins.</p>
+
+<p>To derive the variational principle, we will therefore assume an energy function of the form</p>
+
+<script type="math/tex; mode=display">E_{MF}(s_1, s_2,...,s_N) = -(H + \Delta H) \sum_{i=1}^N s_i</script>
+
+<p>Previously we saw that the mean-field parameter is <script type="math/tex">\Delta H = zJm</script> which we derived using our physics intuition.</p>
+
+<p>Now we ask the question: is this the optimal effective magnetic field? We can think of <script type="math/tex">\Delta H</script> as a parameter of the mean-field model that we can tune to get the best answers for the original system.</p>
+
+<p>This is known as <strong>perturbation theory</strong>: we are perturbing the magnetic field of the system and trying to find the optimal perturbation that yields a good approximation to the original system.</p>
+
+<p>What does a ‘good approximation’ entail? Our difficulties were in computing the partition function. We therefore want to approximate the partition function of the original system <script type="math/tex">Z</script> with the partition function of our mean-field system <script type="math/tex">Z_{MF}</script>. Let’s hope that <script type="math/tex">Z_{MF}</script> is easy to calculate and does not require a sum on the order of the number of atoms in the universe.</p>
+
+<p>First let’s see if we can express the partition function of the original system <script type="math/tex">Z</script> in terms of our approximation. We can measure how the energy of the mean-field system deviates from the reference system by computing the fluctuations in energy:</p>
+
+<script type="math/tex; mode=display">\Delta E(s_1, s_2,...,s_N) = E(s_1, s_2,...,s_N) - E_{MF}(s_1, s_2,...,s_N)</script>
+
+<script type="math/tex; mode=display">\Rightarrow E = E_{MF} + \Delta E</script>
+
+<p>This lets us reëxpress the original partition function as:</p>
+
+<script type="math/tex; mode=display">Z = \sum_{s_1, s_2,...,s_N} \exp{[-\beta(E_{MF} + \Delta E)]}</script>
+
+<script type="math/tex; mode=display">\Rightarrow Z =Z_{MF} \sum_{s_1, s_2,...,s_N}\frac{\exp{(-\beta E_{MF})} \exp{(-\beta\Delta E)}}{Z_{MF}}</script>
+
+<p>For the next step, we need the definition of an expectation of a function <script type="math/tex">A</script> with respect to the mean-field Boltzmann distribution:</p>
+
+<script type="math/tex; mode=display">\langle  A \rangle_{MF} =\sum_{s_1, s_2,...,s_N} \frac{A e^{-\beta E_{MF}}}{Z_{MF}}</script>
+
+<p>This means we can write the partition function of the system in terms of the mean-field partition function as:</p>
+
+<script type="math/tex; mode=display">Z=Z_{MF}\langle \exp{(-\beta \Delta E)}\rangle_{MF}</script>
+
+<p>This is an exact factorization of the partition function of the original system. It is the mean-field partition function weighted by the expected Boltzmann factor for energy fluctuations away from the reference system.</p>
+
+<p>However, integrating this complicated exponential function is difficult, even with respect to the mean-field system. We’ll simplify it with a classic physics trick—by pulling a Taylor expansion.</p>
+
+<p>Let’s assume that the fluctuations of the energy are small; <script type="math/tex">\Delta E \ll 1</script>. Then we can Taylor expand the exponent:</p>
+
+<script type="math/tex; mode=display">\langle \exp{(-\beta \Delta E)}\rangle_{MF}~\approx~\langle  1 - \beta \Delta E + ... \rangle_{MF}</script>
+
+<script type="math/tex; mode=display">=~1 - \beta \langle \Delta E\rangle_{MF}+...</script>
+
+<script type="math/tex; mode=display">=\exp{(-\beta \langle \Delta E\rangle_{MF})} + ...</script>
+
+<p>We have neglected terms of second order in the fluctuations <script type="math/tex">\Delta E</script>. This gives us our first-order perturbation theory result for the partition function of the original system:</p>
+
+<script type="math/tex; mode=display">Z \approx Z_{MF}\exp{(-\beta \langle \Delta E\rangle_{MF})}</script>
+
+<script type="math/tex; mode=display">\Rightarrow Z \approx Z_{MF}\exp{(-\beta \langle  E - E_{MF}\rangle_{MF})}</script>
+
+<p>How good is the approximation? We need a simple identity <sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>: <script type="math/tex">e^x \geq x + 1</script>.</p>
+
+<p>Let’s apply this to the expectation in the exact factorization of the partition function, taking <script type="math/tex">f = -\beta \Delta E</script>:</p>
+
+<script type="math/tex; mode=display">\langle  e^f\rangle = e^{\langle  f\rangle} \langle  e^{(f - \langle  f \rangle)} \rangle</script>
+
+<script type="math/tex; mode=display">\geq e^{ \langle  f \rangle} \langle 1 + f - \langle  f \rangle\rangle = e^{\langle  f \rangle}</script>
+
+<p>Now we can get a lower bound on the partition function:</p>
+
+<script type="math/tex; mode=display">Z = Z_{MF}\langle  \exp{(-\beta \Delta E)}\rangle_{MF}</script>
+
+<script type="math/tex; mode=display">\Rightarrow Z \geq Z_{MF} \exp{[-\beta \langle  E - E_{MF}\rangle_{MF}]}</script>
+
+<p>This inequality is the <strong>Gibbs-Bogoliubov-Feynman inequality</strong>. It tells us that with our mean-field approximation, we get a lower bound on the original partition function.</p>
+
+<h3 id="variational-treatment-of-the-ising-model-using-the-gibbs-bogoliubov-feynman-inequality">Variational treatment of the Ising model using the Gibbs-Bogoliubov-Feynman inequality</h3>
+
+<p>Let’s apply this theory: do we recover the same results for magnetization in the Ising model?</p>
+
+<p>In the mean-field Ising model, we treat each spin independently, so the energy function of the system decomposes into independent parts:</p>
+
+<script type="math/tex; mode=display">E_{MF}(s_1, s_2,...,s_N) = -(H + \Delta H) \sum_{i=1}^N s_i</script>
+
+<p>Here <script type="math/tex">\Delta H</script> is the effective magnetic field strength. It is a parameter we can tune to maximize the lower bound on the partition function.</p>
+
+<p>Let’s plug this into the lower bound on the partition function from the Gibbs-Bogoliubov-Feynman inequality. Then we take the derivative to maximize the lower bound:</p>
+
+<script type="math/tex; mode=display">0 = \frac{\partial}{\partial{\Delta H}} Z_{MF} \exp{[-\beta \langle  E - E_{MF}\rangle_{MF}]}</script>
+
+<p>First, we need  to evaluate the expectation:</p>
+
+<script type="math/tex; mode=display">\langle E - E_{MF}\rangle_{MF} = -N(\frac{1}{2} Jz\langle s_1\rangle^2_{MF} - \Delta H \langle  s_1 \rangle_{MF}),</script>
+
+<p>where we used the mean-field assumption that the spins are independent, hence <script type="math/tex">\langle s_i s_j\rangle_{MF} = \langle s_i\rangle_{MF} \langle s_j\rangle_{MF}</script>.</p>
+
+<p>We also assumed that for a large enough system, spins at the edges of the model (boundary conditions) can be ignored, so all spins have the same average magnetization: <script type="math/tex">\langle s_i\rangle_{MF}\langle s_j\rangle_{MF} = \langle s_1\rangle_{MF}^2</script>.</p>
+
+<p>Plugging this in to the lower bound on the partition function and differentiating gives</p>
+
+<script type="math/tex; mode=display">0 = \tanh[\beta(H + \Delta H)] - \langle s_1\rangle_{MF} - Jz\langle s_1\rangle_{MF} \frac{\partial}{\partial \Delta H} \langle s_1\rangle_{MF} + \Delta H \frac{\partial}{\partial \Delta H} \langle s_1\rangle_{MF}</script>
+
+<script type="math/tex; mode=display">\Rightarrow \Delta H = Jz \langle s_1\rangle_{MF}.</script>
+
+<p>We used that <script type="math/tex">m = \langle s_1\rangle_{MF} =  \tanh{[\beta({H + \Delta H})]}</script> from before.</p>
+
+<p>This confirms our earlier reasoning, that the optimal mean-field parameter is <script type="math/tex">\Delta H = Jzm</script>. There were three steps to this process. We started by defining the model we cared about, we wrote down a mean-field approximation to it, and we maximized a lower bound on the partition function.</p>
+
+<h3 id="the-machine-learning-perspective-on-the-ising-model">The machine learning perspective on the Ising model</h3>
+
+<p>Now let’s frame what we just did in the language of machine learning. More specifically, let’s think in terms of probabilistic modeling.</p>
+
+<p>We need some definitions to see how the variational principle is equivalent to variational inference in machine learning.</p>
+
+<p>The Ising model is an <strong>undirected graphical model</strong> or Markov random field. We can represent the conditional dependencies of the model using a graph; the nodes in the graph are random variables. These random variables are the spins of the Ising model, so two nodes are connected by an edge if they interact. This lets us encode the joint distribution of the random variables in the following diagram:</p>
+
+<center>
+<figure>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 555.10132 433.25266" height="433.25266" width="555.10132" xml:space="preserve" id="svg2" version="1.1"><metadata id="metadata8"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs id="defs6"><clipPath id="clipPath14" clipPathUnits="userSpaceOnUse"><path id="path12" d="M 0,0 H 1024 V 768 H 0 Z" /></clipPath><clipPath id="clipPath24" clipPathUnits="userSpaceOnUse"><path id="path22" d="M 0,0 H 1024 V 768 H 0 Z" /></clipPath></defs><g clip-path="url(#clipPath14)" transform="matrix(1.3333333,0,0,-1.3333333,-326.63867,913.9972)" id="g10"><g id="g16" /><g id="g18"><g clip-path="url(#clipPath24)" id="g20"><path id="path26" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 H 1024 V 768 H 0 Z" /><g transform="matrix(0,1,1,0,316.3266,456)" id="g28"><path id="path30" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,294.8,456)" id="g32"><path id="path34" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,249.3266,434.4734)" id="g36"><path id="path38" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,315.8,369)" id="g40"><path id="path42" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,406.3266,456)" id="g44"><path id="path46" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,384.8,456)" id="g48"><path id="path50" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,339.3266,434.4734)" id="g52"><path id="path54" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,405.8,369)" id="g56"><path id="path58" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,496.3266,456)" id="g60"><path id="path62" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,474.8,456)" id="g64"><path id="path66" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,429.3266,434.4734)" id="g68"><path id="path70" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,495.8,369)" id="g72"><path id="path74" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,586.3266,456)" id="g76"><path id="path78" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,564.8,456)" id="g80"><path id="path82" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,519.3265,434.4734)" id="g84"><path id="path86" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,585.8,369)" id="g88"><path id="path90" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,609.3265,434.4734)" id="g92"><path id="path94" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,316.3266,545)" id="g96"><path id="path98" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,294.8,545)" id="g100"><path id="path102" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,249.3266,523.4734)" id="g104"><path id="path106" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,406.3266,545)" id="g108"><path id="path110" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,384.8,545)" id="g112"><path id="path114" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,339.3266,523.4734)" id="g116"><path id="path118" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,496.3266,545)" id="g120"><path id="path122" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,474.8,545)" id="g124"><path id="path126" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,429.3266,523.4734)" id="g128"><path id="path130" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,586.3266,545)" id="g132"><path id="path134" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,564.8,545)" id="g136"><path id="path138" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,519.3265,523.4734)" id="g140"><path id="path142" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,609.3265,523.4734)" id="g144"><path id="path146" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,316.3266,634)" id="g148"><path id="path150" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,294.8,634)" id="g152"><path id="path154" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,249.3266,612.4734)" id="g156"><path id="path158" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,406.3266,634)" id="g160"><path id="path162" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,384.8,634)" id="g164"><path id="path166" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,339.3266,612.4734)" id="g168"><path id="path170" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,496.3266,634)" id="g172"><path id="path174" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,474.8,634)" id="g176"><path id="path178" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,429.3266,612.4734)" id="g180"><path id="path182" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(0,1,1,0,586.3266,634)" id="g184"><path id="path186" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,564.8,634)" id="g188"><path id="path190" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 36.74816,6.304987 c 8.40665,8.406653 8.40665,22.036523 0,30.443173 -8.40665,8.40665 -22.03652,8.40665 -30.443173,0 -8.406649,-8.40665 -8.406649,-22.03652 0,-30.443173 8.406653,-8.406649 22.036523,-8.406649 30.443173,0 z" /></g><g transform="matrix(1,0,0,-1,519.3265,612.4734)" id="g192"><path id="path194" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="matrix(1,0,0,-1,609.3265,612.4734)" id="g196"><path id="path198" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 0,0 H 45.05315" /></g><g transform="translate(486,513)" id="g200"><text id="text204" style="font-variant:normal;font-weight:300;font-size:36px;font-family:Helvetica;-inkscape-font-specification:Helvetica-Light;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="scale(1,-1)"><tspan id="tspan202" y="0" x="0">s</tspan></text>
+</g><g transform="translate(486,513)" id="g206"><text id="text210" style="font-variant:normal;font-weight:300;font-size:16px;font-family:Helvetica;-inkscape-font-specification:Helvetica-Light;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1,0,0,-1,18,-1.839966)"><tspan id="tspan208" y="0" x="0">i</tspan></text>
+</g></g></g></g></svg>
+
+<figcaption>
+A representation of the Ising model as an undirected graphical model. The nodes are random variables (spins) and edges denote conditional dependencies between their distributions.</figcaption>
+</figure>
+</center>
+
+<p>The Boltzmann distribution is a parameterization of the joint distribution of this graphical model. This figure looks very similar to the physics spin-based representation—the spins are random variables. We can also write the joint distribution of the nodes in exponential family form. Exponential family distributions let us reason about a broad class of models and deserve a header.</p>
+
+<h3 id="exponential-families">Exponential families</h3>
+
+<p>A way to parameterize probability distributions like the Ising model is with <strong>exponential families</strong>. These are families of distributions that support a representation in this specific, convenient mathematical form:</p>
+
+<script type="math/tex; mode=display">p(x ; \eta) = h(x)e^{\eta^\top t(x) - a(\eta)}</script>
+
+<p>Here <script type="math/tex">\eta</script> is called the natural parameter, <script type="math/tex">h(x)</script> is the base measure, <script type="math/tex">t(x)</script> the sufficient statistic and <script type="math/tex">a(\eta)</script> is the log normalizer, or log partition function. I was confused about exponential families for a long time and found concrete derivation helpful.</p>
+
+<p>For example, we are used to seeing the Bernoulli distribution in the following form <sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup>:</p>
+
+<script type="math/tex; mode=display">p(x ; \pi) = \pi^x(1-\pi)^{(1-x)}</script>
+
+<p>We can rewrite this in exponential family form:</p>
+
+<script type="math/tex; mode=display">p(x; \eta) = \exp{\{x\log \pi + (1-x)\log{(1-\pi)}\}}</script>
+
+<script type="math/tex; mode=display">\Rightarrow p(x; \eta)=\exp{\{x\log \frac{\pi}{1-\pi} + \log{(1-\pi)}\}}</script>
+
+<p>Comparing to the above formula for exponential families reveals the natural parameter, base measure, sufficient statistic, and log normalizer for the Bernoulli, given by <script type="math/tex">\eta = \log{\frac{\pi}{1-\pi}}</script>, <script type="math/tex">t(x) = x</script>, <script type="math/tex">a(\eta) = -\log{(1-\pi)} = \log{(1+e^\eta)}</script>, and <script type="math/tex">h(x) = 1</script> respectively.</p>
+
+<p>More connections to physics: the log normalizer is the log of the partition function. This is made clear in the exponential family form of the Bernoulli: <script type="math/tex">\log Z = \log \sum_{x\in\{0,1\}} e^{\eta x} = \log{(1+e^\eta)}</script>. We can now identify the parameter <script type="math/tex">\eta</script> as a analogous to temperature, with <script type="math/tex">x</script> as a spin. We’ve identified the Ising model’s exponential family form!</p>
+
+<h3 id="the-exponential-family-form-of-the-ising-model">The exponential family form of the Ising model</h3>
+
+<p>Let’s connect this to the energy function of the Ising model by writing its Boltzmann distribution in exponential family form:</p>
+
+<script type="math/tex; mode=display">p(s_1, s_2,...,s_N; \beta, J, H) = \frac{e^{-\beta E(s_1, ..., s_N)}}{Z}</script>
+
+<script type="math/tex; mode=display">p(s_1, s_2,...,s_N; \beta, J, H) = \exp{\{-\sum_{(i, j)\in E}\beta Js_is_j + -\sum_{i \in V}\beta Hs_i  - \log{Z}\}}</script>
+
+<script type="math/tex; mode=display">p(s_1, s_2,...,s_N; \theta)=\exp{\{ -\sum_{(i, j)\in E} \theta_{ij}s_is_j -\sum_{i \in V} \theta_i s_i - a(\theta)\}}</script>
+
+<p>We have introduced some new notation common to graphical models: we have specified a joint distribution over a collection of random variables <script type="math/tex">\{s_1, ..., s_N\}</script> that live on the graph over vertices <script type="math/tex">V</script>, joined by edges in the set <script type="math/tex">E</script>.</p>
+
+<p>This is the exponential family form of the Ising model, a <strong>probability model</strong> with model parameters <script type="math/tex">\theta</script>. To equate it to the form we saw earlier, set <script type="math/tex">\theta_{ij} = \frac{1}{2}\beta J</script> if <script type="math/tex">i</script> and <script type="math/tex">j</script> share an edge (i.e. they are neighbors), and set <script type="math/tex">\theta_i = H</script>.</p>
+
+<p>For the Ising model, we can see that there are two sets of model parameters. The spin-spin interaction parameter multiplied by the inverse temperature <script type="math/tex">\beta J</script> controls the effects of each edge in the graph. The inverse temperature multiplied by the magnetic field <script type="math/tex">\beta H</script> affects each spin independently. We can also say that the inverse temperature <script type="math/tex">\beta</script> is a global model parameter. For a fixed interaction and magnetic field, we can vary the temperature to index a specific model.</p>
+
+<p>This is a subtle but important point. Our joint distribution over the set of random variables (the <script type="math/tex">N</script> spins) is <em>indexed</em> by the set of model parameters. By varying the inverse temperature parameter <script type="math/tex">\beta</script>, we are actually selecting a specific model (the Ising model at that temperature). Ditto for a specific choice of the spin-spin interaction parameter <script type="math/tex">J</script>.</p>
+
+<h3 id="what-questions-can-we-ask-about-the-model">What questions can we ask about the model?</h3>
+
+<p>Computing the magnetization <script type="math/tex">m = \frac{1}{N}\langle  s_1 + ... + s_N \rangle = \langle  s_i \rangle</script> means calculating the expectation <script type="math/tex">\mathbb{E}_{p(s_i)}[s_i]</script>. In probability language, this means calculating the marginal expectation of a node <script type="math/tex">i</script>.</p>
+
+<p>But calculating the marginal distribution is intractable for reasons we already discussed: it requires marginalizing over all other nodes <script type="math/tex">j \neq i</script>:</p>
+
+<script type="math/tex; mode=display">p(s_i) = \sum_{s_1=\pm 1} ... \sum_{s_{i-1}=\pm 1}\sum_{s_{i+1}=\pm 1}...\sum_{s_N=\pm1} p(s_1,...,s_{i-1}, s_i, s_{i+1}, ..., s_N)</script>
+
+<p>The situation is hopeless: not only do we need to calculate the normalizing constant for the joint distribution of <script type="math/tex">N</script> nodes, which has <script type="math/tex">2^N</script> terms, but then we need to marginalize over <script type="math/tex">N-1</script> variables (another <script type="math/tex">2^{N-1}</script> terms).</p>
+
+<p>This is identical to what we saw in the partition function, when thinking about this model from a physics perspective.</p>
+
+<p>Can we still answer questions about the marginal distributions by resorting to a variational principle?</p>
+
+<h3 id="variational-inference-in-machine-learning">Variational inference in machine learning</h3>
+
+<p>If we could calculate the sum over all configurations of random variables, we could calculate the partition function. But we can’t, because the sum grows as <script type="math/tex">2^N</script>.</p>
+
+<p>With our physics hat on, our strategy was to approximate to the partition function.</p>
+
+<p>From a machine learning perspective, this technique is known as <strong>variational inference</strong>. We <em>vary</em> something simple to <em>infer</em> something complicated.</p>
+
+<p>Let’s look at how the variational free energy is derived in machine learning and used to approximate partition functions.</p>
+
+<p>We have a probability model of random variables <script type="math/tex">p_\theta(s_1, ..., s_N)</script> and we seek to calculate its normalizing constant or partition function <sup id="fnref:7"><a href="#fn:7" class="footnote">7</a></sup>.</p>
+
+<p>Let’s construct a simpler probability distribution <script type="math/tex">q_\lambda(s_1, ..., s_N)</script>, parameterized by <script type="math/tex">\lambda</script>, and use it to approximate our model.</p>
+
+<p>How good is our approximation? One way of measuring how close our approximation is to our goal distribution is with the Kullback-Leibler divergence.</p>
+
+<p>This divergence between <script type="math/tex">q</script> and <script type="math/tex">p</script>, or relative entropy, measures the amount of information (in bits or nats) that is lost when using <script type="math/tex">q</script> to approximate <script type="math/tex">p</script>.</p>
+
+<p>This gives us a criteria with which to vary our approximation. We the <script type="math/tex">\lambda</script> parameter of our approximation until we minimize the approximation error, as measured by the Kullback-Leibler divergence.</p>
+
+<p>The KL divergence is written with a double vertical bar as</p>
+
+<script type="math/tex; mode=display">\textrm{KL}(q(s) \mid\mid p(s)) = \int q(s) \log \frac{q(s)}{p(s)}ds</script>
+
+<p>Let’s assume we are dealing with an exponential family distribution such as the Ising model. We let <script type="math/tex">p</script> be the Boltzmann distribution for our model with the known energy function <script type="math/tex">E(s_1, ..., s_N)</script>:</p>
+
+<script type="math/tex; mode=display">p(s) = \frac{e^{-\beta E(s)}}{Z}</script>
+
+<p>We assume that <script type="math/tex">q</script> is a family of distributions with another energy function that has parameters <script type="math/tex">\lambda</script>:</p>
+
+<script type="math/tex; mode=display">q_\lambda(s) = \frac{e^{-\beta E_\lambda(s)}}{Z_q}</script>
+
+<p>To measure how much information we lose when we use our approximation <script type="math/tex">q</script> instead of <script type="math/tex">p</script>, we plug them into the Kullback-Leibler divergence:</p>
+
+<script type="math/tex; mode=display">\textrm{KL}(q_\lambda(s) \mid \mid p(s)) = \int q_\lambda(s) \log q_\lambda(s) - \int q_\lambda(s) \log \exp{(-\beta E(s))} + \log Z</script>
+
+<script type="math/tex; mode=display">= \mathbb{E}_{q_\lambda} [\log q_\lambda(s)] - \mathbb{E}_{q_\lambda}[-\beta E(s)] + \log Z</script>
+
+<script type="math/tex; mode=display">= -\mathcal{L(\lambda)} + \log Z</script>
+
+<p>where we have defined the variational lower bound <script type="math/tex">\mathcal{L}(\lambda)</script> as</p>
+
+<script type="math/tex; mode=display">\mathcal{L}(\lambda) = \mathbb{E}_{q_\lambda}[\log p(s)] - \mathbb{E}_{q_\lambda}[\log q(s)]</script>
+
+<p>We can move the variational lower bound to the other side of the equation to get the following identity:</p>
+
+<script type="math/tex; mode=display">\log Z = \textrm{KL}(q \mid\mid p) + \mathcal{L}(\lambda)</script>
+
+<p>With Jensen’s inequality it is easy to show that the KL divergence is always greater than or equal to zero. This means that if we make <script type="math/tex">\mathcal{L}(\lambda)</script> bigger, the KL divergence must get smaller (i.e. our approximation must improve). Thus we can lower bound the partition function:</p>
+
+<script type="math/tex; mode=display">\log Z \geq \mathcal{L}(\lambda)</script>
+
+<p>This means we can vary the parameters <script type="math/tex">\lambda</script> of our approximation to improve the lower bound, and get a better and better approximation to the partition function!</p>
+
+<p>Note that in the definition of the variational lower bound, we do not need to worry about the arduous task of calculating the partition function: it does not depend on <script type="math/tex">\lambda</script>.</p>
+
+<p>This is awesome: we have constructed an approximation <script type="math/tex">q_\lambda</script> to our probability model <script type="math/tex">p</script> and found a way to vary its parameters so that our approximation gets better and better.</p>
+
+<p>The interesting part is that we get can improve the approximation to our model <script type="math/tex">p</script> without calculating its intractable partition function. We <em>only</em> need to evaluate its energy function <script type="math/tex">E(s)</script> which is cheap to compute.</p>
+
+<p>Is this too clever to be true? Have we surrendered anything? We have lost the ability to measure how good our approximation is, in absolute terms—for that, we still need to calculate the partition function to compute the KL divergence. We do know that as long as our lower bound <script type="math/tex">\mathcal{L}(\lambda)</script> increases as we vary <script type="math/tex">\lambda</script>, our approximation gets better, and this is sufficient for a variety of problems.</p>
+
+<h3 id="variational-inference-as-the-gibbs-bogoliubov-feynman-inequality">Variational inference as the Gibbs-Bogoliubov-Feynman inequality!</h3>
+
+<p>Let’s see if this is the same as the Gibbs-Bogoliubov-Feynman inequality we saw in physics. Recall that the inequality is</p>
+
+<script type="math/tex; mode=display">Z \geq Z_{MF} \exp{[-\beta \langle E - E_{MF}\rangle_{MF}]}.</script>
+
+<p>Taking logarithms:</p>
+
+<script type="math/tex; mode=display">\log Z \geq  - \langle \beta E\rangle_{MF} + \langle \beta E_{MF}\rangle_{MF} + \log Z_{MF}</script>
+
+<script type="math/tex; mode=display">\Rightarrow \log Z \geq \mathbb{E}_{q_\lambda} [ \log p(s) ] - \mathbb{E}_{q_\lambda} [\log q_\lambda(s) ]</script>
+
+<script type="math/tex; mode=display">\Rightarrow \log Z \geq \mathcal{L}(\lambda)</script>
+
+<p>Where we have identified that the variational family we are using, is the mean-field Boltzmann distribution <script type="math/tex">q_\lambda(s) = \prod_i \frac{\exp(-\beta E_{MF}(s))}{Z_{MF}}</script>. Again, <script type="math/tex">\lambda</script> denotes the variational parameters that we vary to maximize the lower bound <sup id="fnref:8"><a href="#fn:8" class="footnote">8</a></sup>.</p>
+
+<p>This shows that variational inference in machine learning—maximizing a lower bound on the partition function—is exactly the Gibbs-Bogoliubov-Feynman inequality in action.</p>
+
+<h3 id="the-evidence-lower-bound-in-approximate-posterior-inference">The evidence lower bound in approximate posterior inference</h3>
+
+<p>In machine learning we care about patterns in data. This gives rise to the concept of <strong>latent variables</strong>, unobserved random variables that capture patterns in observed data.</p>
+
+<p>For example, in linear regression we might posit a linear relationship between someone’s age and their income. This scalar coefficient captures a latent pattern that we seek to infer from many examples of (age, income) tuples.</p>
+
+<p>We refer to a probability model as a model of latent variables <script type="math/tex">z</script> and data <script type="math/tex">x</script>. The <strong>posterior distribution</strong> of latent variables given observed data is written <script type="math/tex">p(z \mid x)</script>.</p>
+
+<p>What is a posterior? In our regression example of the relationship between age and income, we want the posterior distribution of the regression coefficient after observing data. Our choice of prior on the coefficient is a modeling decision and reflects our belief about the statistical relationship we hope to observe.</p>
+
+<p>The posterior is given by Bayes’ rule:</p>
+
+<script type="math/tex; mode=display">p(z \mid x) = \frac{p(x \mid z) p(z)}{\int p(x, z) dz}</script>
+
+<p>The denominator is the evidence; the marginal distribution of the data: <script type="math/tex">p(x) = \int p(x, z) dz</script>. This is the normalizer of the joint distribution of latent variables and data, or the partition function. This partition function is a sum over all configurations of random variables, and is intractable as we saw twice before.</p>
+
+<p>Can we still do posterior inference despite the intractable partition function?</p>
+
+<p>The refrain is familiar: we have an intractable sum in our partition function, but we can approximate it using the tools we developed earlier! Variational inference to the rescue. Let’s write out the variational lower bound on the partition function:</p>
+
+<script type="math/tex; mode=display">\log Z = \log p(x) \geq \mathcal{L}(\lambda) = \mathbb{E}_{q_\lambda}[p(x, z)] - \mathbb{E}_{q_\lambda}[\log q_\lambda (z)]</script>
+
+<p>Again, by varying the parameters <script type="math/tex">\lambda</script> we can learn a good approximate posterior distribution <script type="math/tex">q_\lambda(z)</script> to approximate the posterior we care about but can’t calculate, <script type="math/tex">p(z \mid x)</script>.</p>
+
+<p>If we are using the variational method to learn an approximate posterior, our partition function is the evidence <script type="math/tex">\log p(x)</script>. We thus refer to the variational lower bound <script type="math/tex">\mathcal{L}(\lambda)</script> as the <strong>Evidence Lower Bound</strong> or ELBO and speak of maximizing the ELBO to learn a good approximate posterior distribution.</p>
+
+<p>This technique has been used in machine learning for the past two decades. It is becoming popular because intractable partition functions come with the need to analyze large datasets. Because the variational principle relies on optimizing a lower bound, the field has borrowed heavily from the optimization literature to scale Bayesian inference to massive data. It’s an exciting area, as new techniques from stochastic optimization may enable us to explore new physics and machine learning models.</p>
+
+<h3 id="connections-are-machine-learning-techniques-useful-in-physics">Connections: are machine learning techniques useful in physics?</h3>
+
+<p>There are many techniques for approximating partition functions developed in the machine learning community that may find use in physics.</p>
+
+<p>For example, <a href="https://arxiv.org/abs/1401.0118">black box variational inference</a> and <a href="https://arxiv.org/abs/1603.00788">automatic differentiation variational inference</a> are generic methods that may be useful in physics. They develop frameworks for constructing expressive approximate distributions and efficient optimization techniques.</p>
+
+<p>Question for physicists familiar with variational methods: is stochastic optimization used in variational methods? <em>Would</em> this be useful?</p>
+
+<h3 id="connections-could-tools-from-physics-be-useful-in-machine-learning">Connections: could tools from physics be useful in machine learning?</h3>
+
+<p>Yes! The Gibbs-Bogoliubov-Feynman inequality was originally developed in physics and found its way to machine learning through Michael Jordan’s group at Berkeley.</p>
+
+<p>There seems to be a separate literature on constructing flexible families of distributions to approximate distributions. The replica trick, renormalization group theory, and others are just some topics that are beginning to make their way from statistical physics to machine learning.</p>
+
+<p>Another example of tools from physics used in machine learning is <a href="https://arxiv.org/abs/1610.09033">operator variational inference</a>. In this work, we developed a framework for constructing operators (such as the KL divergence) that measure how good an approximation is. The framework enables making explicit the tradeoffs between how good our approximation is and how much computation a variational method requires. The Langevin-Stein operator is equivalent to the Hamiltonian operator in physics (<a href="https://www.dropbox.com/s/jd844d9ck0yqlgr/operator-hamiltonian-momentum-space.pdf?dl=0">note</a>) and was originally developed in a Physical Review Letters <a href="https://arxiv.org/abs/cond-mat/9911396">paper</a>.</p>
+
+<p>A fun question to ponder is “why KL divergence?” and the physics perspective is illuminating. It corresponds to the first-order Taylor expansion of the partition function and comes with assumptions about the non-equilibrium perturbed distribution. Does the second-order Taylor expansion correspond to another divergence and yield more accurate solutions?</p>
+
+<p>I recently learned about replica theory. The replica trick is a technique for calculating the partition function of a system exactly, using an <a href="https://en.wikipedia.org/wiki/Replica_trick">insane formula</a>. It begs the question: what assumptions do we need to use this for probabilistic graphical models?</p>
+
+<p>I’m excited to see more work in this area as physicists <a href="https://www.wired.com/2017/01/move-coders-physicists-will-soon-rule-silicon-valley/">migrate</a> to data science and machine learning.</p>
+
+<hr />
+
+<p>How can we make transitions faster? How can we efficiently move techniques between machine learning and physics? Would code samples be helpful?</p>
+
+<p>This post is an attempt at mapping the language from one community to another. Another idea is a long review paper that to give detailed examples of models solved within a statistical physics framework (with mean-field methods, replica theory, renormalization theory, etc) and solved with modern variational inference from a machine learning perspective (black box variational inference, stochastic optimization, etc). This would highlight how the fields complement each other.</p>
+
+<h3 id="glossary">Glossary</h3>
+<ul>
+  <li>Expectations: the angle brackets <script type="math/tex">\langle ~~\cdot~~\rangle</script> denote an expectation. In the machine learning literature, this is denoted as <script type="math/tex">\mathbb{E}_p[~~\cdot~~]</script> for the expectation of a quantity with respect to the distribution <script type="math/tex">p</script>. For example, <script type="math/tex">\langle  f(\vec{s}) \rangle</script> denotes an expectation of a function of the spins <script type="math/tex">f(\vec{s})</script>. The expectation is implicitly with respect to the Boltzmann distribution:
+<script type="math/tex">\langle  f(\vec{s}) \rangle = \mathbb{E}_p[f(\vec{s})] = \sum_{\{s_1, ..., s_N\}} f(\vec{s}) p(\vec{s})</script>
+<script type="math/tex">= \sum_{\{s_1, ..., s_N\}} f(\vec{s})=\frac{e^{-\beta H(\vec{s})}}{Z}</script></li>
+  <li>Spins in physics are called random variables in statistics and machine learning.</li>
+  <li>The evidence lower bound in variational inference is the negative free energy in physics terminology.</li>
+</ul>
+
+<hr />
+
+<p><em>Anything to add or fix in this article to reduce confusion and increase clarity? Please <a href="mailto:altosaar@princeton.edu">email me</a>, <a href="https://twitter.com/thejaan">tweet</a>, or <a href="https://github.com/altosaar/jaan.io/blob/master/_posts/blog/2017-08-11-how-does-physics-connect-machine-learning.md">submit a pull request</a>.</em></p>
+
+<hr />
+
+<h3 id="references">References</h3>
+<ul>
+  <li><a href="http://www.complex-systems.com/pdf/01-5-6.pdf">Peterson &amp; Anderson (1987)</a> used solutions to time-dependent Ising models to learn the parameters of Boltzmann machines. This is a canonical reference for the ‘start’ of variational inference as it is known in the machine learning community.</li>
+  <li>You can go deep into Ising models: there are hundreds of lectures and references on line. Here are the sources I used for these notes: from <a href="http://quantumtheory.physik.unibas.ch/people/bruder/Semesterprojekte2007/p1/Ising.pdf">Basel</a> and <a href="https://www.physik.uni-muenchen.de/lehre/vorlesungen/sose_14/asp/lectures/ASP_Chapter5.pdf">Munich</a>.</li>
+  <li>Dave’s course, <a href="http://www.cs.columbia.edu/~blei/fogm/2016F/">Foundations of Graphical Models</a></li>
+  <li><a href="https://people.eecs.berkeley.edu/~wainwrig/Papers/WaiJor08_FTML.pdf">Wainwright &amp; Jordan (2008)</a> is challenging but worthwhile.</li>
+  <li>David Chandler’s Introduction to Modern Statistical Mechanics (1987) has a simple derivation of the variational free energy (Section 5.1, pp. 135-138) that I followed in this exposition.</li>
+  <li>Feynman, Statistical Mechanics - A set of lecture notes (1972) derives the variational free energy using a perturbation expansion (Section 2.11, pp. 67-71).</li>
+  <li>Parisi’s Statistical Field Theory (1988) derives the variational principle in three different ways (Section 3.2, pp. 24-31).</li>
+  <li>Matthew Beal’s <a href="http://www.cse.buffalo.edu/faculty/mbeal/thesis/beal03_2.pdf">thesis</a> has interesting references, and Rich Turner has <a href="http://www.gatsby.ucl.ac.uk/~turner/Notes/ContrastiveDivergence/FreeEnergyNotes.pdf">notes</a> on correspondences between physics and machine learning.</li>
+</ul>
+
+<p><em>Thanks to Bohdan Kulchytskyy, Florian Wentzel, Smiti Kaul, Guillaume Verdon, Henri Palacci, Sam Ritter, Mattias Fitzpatrick, and Sophie Kleber for comments and encouragement. Image credits: Freepik for iconography, and Analytical Scientific for the Newton’s cradle image.</em></p>
+
+<h3 id="footnotes">Footnotes</h3>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="http://www.physics.udel.edu/~glyde/PHYS813/Lectures/chapter_3.pdf">Derivation</a>&nbsp;<a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>For a tiny system, e.g. with three spins, we have <script type="math/tex">8</script> states and the sum is doable - but the system is uninteresting.&nbsp;<a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>For example, the magnetization of dysprosium aluminium garnet at low temperatures is exactly <a href="http://www.sbfisica.org.br/bjp/files/v30_794.pdf">described</a> by this model.&nbsp;<a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>To see this, recall that <script type="math/tex">\cosh x = \frac{e^x + e^{-x}}{2}</script>&nbsp;<a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p><a href="http://www.wolframalpha.com/input/?i=plot+e%5Ex,+x+%2B+1">Visual proof</a> that <script type="math/tex">e^x \geq x + 1</script>.&nbsp;<a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>The semicolon notation means “the distribution over <script type="math/tex">x</script> is parameterized in terms of the parameter <script type="math/tex">\pi</script>”.&nbsp;<a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:7">
+      <p>Writing the parameters of a distribution as a subscript (<script type="math/tex">p_\theta(s)</script>) is shorthand for writing them after the semicolon (<script type="math/tex">p(s; \theta)</script>).&nbsp;<a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:8">
+      <p>In the variational treatment of the Ising model we had one variational parameter, the perturbation to the static magnetic field <script type="math/tex">\lambda = \Delta H</script>.&nbsp;<a href="#fnref:8" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+      <!--<div class="sharet"><a class="share" href="https://twitter.com/intent/tweet?text=https://jaan.io/how-does-physics-connect-machine-learning/+%40thejaan" target ="_blank" data-dnt="true"><i class="icon-twitter"></i></a>&nbsp;&nbsp;&nbsp;<a class="share" href="https://www.facebook.com/sharer/sharer.php?u=https://jaan.io/how-does-physics-connect-machine-learning/" target="_blank"><i class="icon-facebook"></i></a>&nbsp;&nbsp;&nbsp;</div>-->
+
+      <!--<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>-->
+
+      
+
+      </article>
+    </section>
+</div>
+<script>
+    var scripts = document.getElementsByTagName("script");
+    for (var i = 0; i < scripts.length; i++) {
+      /* TODO: keep going after an individual parse error. */
+      var script = scripts[i];
+      if (script.type.match(/^math\/tex/)) {
+        var text = script.text === "" ? script.innerHTML : script.text;
+        var options = script.type.match(/mode\s*=\s*display/) ?
+                      {displayMode: true} : {};
+        script.insertAdjacentHTML("beforebegin",
+                                  katex.renderToString(text, options));
+      }
+    }
+    document.body.className += " math_finished";
+</script>
+
+<div class="push"></div>
+  <footert>
+  <footer>
+    <!--<aside class="wrap">
+      <ol class="prev-posts">
+        <p class="list-title"><a href="/">Recent Articles</a></p>
+        
+            <li>
+              <span class="recent-title"><a href="http://localhost:4000/how-does-physics-connect-machine-learning/" title="How does physics connect to machine learning?">How does physics connect to...</span>
+              <span class="date">Aug 11, 2017</a></span>
+            </li>
+        
+            <li>
+              <span class="recent-title"><a href="http://localhost:4000/food2vec-augmented-cooking-machine-intelligence/" title="food2vec - Augmented cooking with machine intelligence">food2vec - Augmented cookin...</span>
+              <span class="date">Jan 22, 2017</a></span>
+            </li>
+        
+            <li>
+              <span class="recent-title"><a href="http://localhost:4000/operator-variational-inference/" title="Operator Variational Inference">Operator Variational Inference</span>
+              <span class="date">Oct 31, 2016</a></span>
+            </li>
+        
+      </ol>
+
+      <div class="social">
+        <ul>
+            <li><a href="http://localhost:4000/about"><span class="foot-link">About</span></a></li>
+
+            <li><a href="http://localhost:4000/articles"><span class="foot-link">Articles</span></a></li>
+
+            <li><a id="mail" href="https://jaan.io/feed.xml"><span class="foot-link">Subscribe</span></a></li>
+
+
+
+            
+
+
+            
+        </ul>
+    </div>
+    </aside>-->
+    <!-- <small>&copy; 2019 <a href="mailto:jaan@jaan.io">  </a></small> -->
+    <small><a href="http://localhost:4000/blog">back to blog </a><a href="https://twitter.com/thejaan" target="_blank"><i class="fa fa-twitter"></i></a></small>
+  </footer>
+</footert>
+
+  <!-- If they're out, get some from the cellar -->
+  <script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="http://localhost:4000/assets/js/retina.min.js"></script>
+
+  <!-- Custom JS -->
+  <script async src="http://localhost:4000/assets/js/scripts.js"></script>
+
+
+  
+  <!-- Asynchronous Google Analytics snippet -->
+  <script>
+    var _gaq = _gaq || [];
+    var pluginUrl =
+    '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+    _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+    _gaq.push(['_setAccount', 'UA-34129661-2']);
+    _gaq.push(['_trackPageview']);
+
+  setTimeout(function() {
+    window.onscroll = function() {
+      window.onscroll = null; // Only track the event once
+      _gaq.push(['_trackEvent', 'scroll', 'read']);
+    }
+  }, 5000);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+
+  </body>
+</html>
