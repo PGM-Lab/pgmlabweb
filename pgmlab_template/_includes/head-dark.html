@@ -88,12 +88,12 @@
         </hgroup>
         <a href="#nav" class="menu"><span class='icons'>☰</span></a>
         
-        <nav role="navigation">
+        <nav class="menu" role="navigation">
           <ul>
             <!--<li>
               <a href="/" title="{{ site.title }}">Home</a>
             </li>-->
-            <ul>
+            
             {% assign url = page.url|remove:'index.html' %}
             {% for link in site.links %}
                 {% assign state = '' %}
@@ -102,9 +102,9 @@
                 {% endif %}
                 <!--<li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li> -->
                    {% if link.sublinks %}
-                      <li class="dropdown {{ class }}">
-                          <a href="{{ site.baseurl }}{{ link.url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ link.title }} <span class="caret"></span></a>
-                          <ul class="dropdown-menu">
+                      <li>
+                          <a href="{{ site.baseurl }}{{ link.url }}" class="subhover" role="button" aria-haspopup="true" aria-expanded="false">{{ link.title }} <span class="caret"></span></a>
+                          <ul class="dropdown">
                               {% for sublink in link.sublinks %}
                                   {% if sublink.title == 'separator' %}
                                       <li role="separator" class="divider"></li>
@@ -115,6 +115,7 @@
                                   {% endif %}
                               {% endfor %}
                           </ul>
+  
                       </li>
                   {% else %}
                       <li class="{{ class }}">
@@ -122,6 +123,7 @@
                       </li>
                   {% endif %}
             {% endfor %}
+            
 
           </ul>
         </nav> 
