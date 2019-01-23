@@ -10,6 +10,22 @@
     </url>
     
     <url>
+        <loc>http://localhost:4000/data-science/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/rafa-rumi/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/machine-learning/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/phd/</loc>
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/how-does-physics-connect-machine-learning/</loc>
     </url>
     
