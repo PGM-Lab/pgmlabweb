@@ -1,11 +1,11 @@
 ---
 layout: external
-title: PhD Program
+title: Data Science Education
 category: education
-external_url: #
+external_url: "javascript:history.go(0)"
 tags: [PhD Program]
 image:
-  thumb: phd.png
+  thumb: datascientist.jpg
 published: true
 ---
-In our lab we offer fully funded PhD opportunities for talented students who want to go deeper in their data science and machine learning education.
+In our lab we provide different training programs for data science at different levels.

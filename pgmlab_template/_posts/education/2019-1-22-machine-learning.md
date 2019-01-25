@@ -2,7 +2,7 @@
 layout: external
 title: Machine Learning Education
 category: education
-external_url: #
+external_url: "javascript:history.go(0)"
 tags: [Machine Learning]
 image:
   thumb: machine-learning.jpg

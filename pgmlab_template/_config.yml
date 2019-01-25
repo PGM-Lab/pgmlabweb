@@ -37,17 +37,21 @@ links:
       - title: Papers
         url: /publications
       - title: Projects
-        url: /talks
+        url: /publications
+      - title: Talks
+        url: /publications
+      - title: Tutorials
+        url: /publications
   - title: Education
-    url: /blog
+    url: /education
   - title: Software
     url: /software
   - title: Consultancy
-    url: /publications
-  - title: People
+    url: /consultancy
+  - title: Team
     url: /people
-  - title: Contact
-    url: /talks
+  - title: Blog
+    url: /blog
 
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones

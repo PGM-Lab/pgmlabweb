@@ -11,4 +11,4 @@ published: true
 ---
 {% icon fa-envelope %} rrumi@ual.es 
 
-[{% icon fa-github %}](#) [{% icon fa-linkedin %}](#) [{% icon fa-google %}](#) [{% icon fa-home %}](https://w3.ual.es/personal/rrumi/)
+[{% icon fa-linkedin %}](https://es.linkedin.com/in/rafael-rum%C3%AD-rodr%C3%ADguez-9b135819) [{% icon fa-google %}](https://scholar.google.com/citations?user=LG1mJ6QAAAAJ&hl=es) [{% icon fa-home %}](https://w3.ual.es/personal/rrumi/)

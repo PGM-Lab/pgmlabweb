@@ -191,7 +191,7 @@ nav ul li a{
     }
 nav ul li a:hover{
         color: #fff;
-        background: #939393;
+       /* background: #939393;*/
     }
 nav ul li ul.dropdown{
         min-width: 100%; /* Set width of the dropdown */
@@ -502,6 +502,11 @@ header.site-header nav ul li a:hover {
   /* Home page */
 .home_image{
 	width: 100%;
+}
+
+.icon-contact{
+  margin-left: 20%;
+  padding-top: 3%;
 }
 
 /* Article Stuff */
